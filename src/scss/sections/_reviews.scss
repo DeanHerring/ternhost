@@ -1,0 +1,47 @@
+@import '../other/all.scss';
+
+.reviews {
+  background-color: $white-100;
+  .container {
+    .reviews__content {
+      margin-top: 5rem;
+      .swiper {
+        padding: 2rem 0;
+        &-wrapper {
+          .swiper-slide {
+            .review {
+              text-align: center;
+              background-color: $white-200;
+              padding: 2.5rem 1rem;
+              .review__text {
+                @include text-lg(400, $gray-200);
+              }
+              .review__author {
+                margin-top: 1.5rem;
+                h1 {
+                  @include text-xl(700, $blue-200);
+                }
+                h3 {
+                  @include text-sm(400, $gray-200);
+                }
+              }
+            }
+          }
+        }
+        &-pagination {
+          &-bullet {
+            width: 20px;
+            height: 8px;
+            border-radius: 20px;
+            background-color: $blue-100;
+            opacity: 1;
+            transition: all 0.3s;
+            &-active {
+              width: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

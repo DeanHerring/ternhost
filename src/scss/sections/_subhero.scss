@@ -1,0 +1,109 @@
+@import '../other/all.scss';
+
+.subhero {
+  background-color: $white-100;
+  .container {
+    .subhero__content {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      grid-gap: 3rem;
+      @media screen and (max-width: 1200px) {
+        grid-template-columns: 0.75fr 1fr;
+        grid-gap: 1rem;
+      }
+      @media screen and (max-width: 900px) {
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+      }
+      .subhero__domain {
+        h1 {
+          @include text-4xl(700, $blue-200);
+          @media screen and (max-width: 1200px) {
+            @include text-2xl(700, $blue-200);
+          }
+        }
+        &-input {
+          background-color: $white-200;
+          border-radius: 5px;
+          display: flex;
+          margin-top: 1rem;
+          input {
+            @include text-base;
+            flex-grow: 1;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 0 1rem;
+            @media screen and (max-width: 1200px) {
+              padding: 0 0.5rem;
+              @include text-sm;
+            }
+          }
+          .btn {
+            border-radius: 0 5px 5px 0;
+            @media screen and (max-width: 1200px) {
+              padding: 5px 10px;
+              @include text-base(700, $white-100);
+            }
+          }
+        }
+      }
+      .subhero__prices {
+        @include center-y;
+        .subhero__list {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 1rem;
+          @media screen and (max-width: 1400px) {
+            grid-template-columns: repeat(3, 1fr);
+          }
+          @media screen and (max-width: 1000px) {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          @media screen and (max-width: 900px) {
+            grid-template-columns: repeat(3, 1fr);
+          }
+          .subhero__item {
+            &:nth-child(5),
+            &:nth-child(6) {
+              display: none;
+            }
+            @media screen and (max-width: 1400px) {
+              &:nth-child(4) {
+                display: none;
+              }
+            }
+            @media screen and (max-width: 1000px) {
+              &:nth-child(3),
+              &:nth-child(4) {
+                display: none;
+              }
+            }
+            @media screen and (max-width: 900px) {
+              &:nth-child(3),
+              &:nth-child(4) {
+                display: block;
+              }
+            }
+            @media screen and (max-width: 500px) {
+              h1 {
+                display: none;
+              }
+            }
+            span {
+              @include text-xl(700, $blue-100);
+            }
+            h3 {
+              @include text-sm(500, $gray-200);
+            }
+            h1 {
+              @include text-4xl(700, $blue-200);
+              span {
+                @include text-sm(400, $blue-200);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

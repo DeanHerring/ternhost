@@ -1,0 +1,14 @@
+@import '../other/all';
+
+.btn {
+  @include text-lg(700, $white-100);
+  border-radius: 5px;
+  padding: 10px 35px;
+  cursor: pointer;
+  &-primary {
+    background-color: $blue-200;
+  }
+  &-secondary {
+    background-color: $blue-100;
+  }
+}

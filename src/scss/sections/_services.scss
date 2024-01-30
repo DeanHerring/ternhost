@@ -1,0 +1,46 @@
+@import '../other/all.scss';
+
+.services {
+  background-color: $white-500;
+  .container {
+    .services__content {
+      margin-top: 5rem;
+      .services__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5rem;
+        @media screen and (max-width: 1200px) {
+          grid-gap: 1rem;
+        }
+        @media screen and (max-width: 800px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width: 500px) {
+          grid-template-columns: 1fr;
+          grid-gap: 5rem;
+        }
+        .services__item {
+          @include center-y;
+          flex-direction: column;
+          text-align: center;
+          &-image {
+            @include center;
+            width: 100px;
+            aspect-ratio: 1 / 1;
+            background-color: $white-400;
+            border-radius: 10px;
+          }
+          &-text {
+            h1 {
+              @include text-xl(700, $blue-200);
+              margin: 1rem 0;
+            }
+            p {
+              @include text-base(400, $gray-200);
+            }
+          }
+        }
+      }
+    }
+  }
+}

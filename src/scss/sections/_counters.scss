@@ -1,0 +1,22 @@
+@import '../other/all.scss';
+
+.counters-wrapper {
+  background-color: $blue-100;
+  .container {
+    .counters {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      &__item {
+        margin: 1rem;
+        text-align: center;
+        h1 {
+          @include text-6xl(700, $white-100);
+        }
+        h3 {
+          @include text-lg(400, $white-100);
+        }
+      }
+    }
+  }
+}

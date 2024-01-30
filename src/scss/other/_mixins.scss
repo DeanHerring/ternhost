@@ -1,0 +1,111 @@
+@import 'variables';
+
+@mixin text-sm($weight: 400, $color: $black-100) {
+  font-family: $poppins;
+  font-size: 0.875rem; // 14px
+  line-height: 1.25rem;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin text-base($weight: 400, $color: $black-100) {
+  font-family: $poppins;
+  font-size: 1em; // 16px
+  line-height: 1.5rem;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin text-lg($weight: 400, $color: $black-100) {
+  font-family: $poppins;
+  font-size: 1.125em; // 18px
+  line-height: 1.75rem;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin text-xl($weight: 400, $color: $black-100) {
+  font-family: $poppins;
+  font-size: 1.25em; // 20px
+  line-height: 1.75rem;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin text-2xl($weight: 400, $color: $black-100) {
+  font-family: $poppins;
+  font-size: 1.5em; // 24px
+  line-height: 2rem;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin text-3xl($weight: 400, $color: $black-100) {
+  font-family: $poppins;
+  font-size: 1.875em; // 30px
+  line-height: 2.25rem;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin text-4xl($weight: 400, $color: $black-100) {
+  font-family: $poppins;
+  font-size: 2.25em; // 36px
+  line-height: 2.5rem;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin text-5xl($weight: 400, $color: $black-100) {
+  font-family: $poppins;
+  font-size: 3em; // 48px
+  line-height: 1;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin text-6xl($weight: 400, $color: $black-100) {
+  font-family: $poppins;
+  font-size: 3.75rem; // 60px
+  line-height: 1;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin text-7xl($weight: 400, $color: $black-100) {
+  font-family: $poppins;
+  font-size: 4.5em; // 72px
+  line-height: 1;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin text-8xl($weight: 400, $color: $black-100) {
+  font-family: $poppins;
+  font-size: 6em; // 96px
+  line-height: 1.75rem;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin text-9xl($weight: 400, $color: $black-100) {
+  font-family: $poppins;
+  font-size: 8em; // 128px
+  line-height: 1.75rem;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin center-x {
+  display: flex;
+  justify-content: center;
+}
+@mixin center-y {
+  display: flex;
+  align-items: center;
+}

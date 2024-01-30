@@ -1,0 +1,77 @@
+@import '../other/all';
+
+.footer-wrapper {
+  background-color: $white-200;
+  .container {
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-gap: 10rem;
+      @media screen and (max-width: 1000px) {
+        grid-gap: 3rem;
+      }
+      @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+      }
+      &__company {
+        @media screen and (max-width: 800px) {
+          @include center-y;
+          flex-direction: column;
+          text-align: center;
+        }
+        &-logo {
+          @include center-y;
+          h1 {
+            @include text-4xl(700, $blue-200);
+            margin-left: 0.625rem;
+          }
+        }
+        &-about {
+          margin-top: 1.5rem;
+          p {
+            @include text-base(400, $gray-200);
+          }
+        }
+      }
+      &__sitemap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @media screen and (max-width: 600px) {
+          grid-template-columns: 1fr;
+          grid-gap: 3rem;
+          text-align: center;
+        }
+        .footer__menu {
+          h1 {
+            @include text-base(700);
+          }
+          &-enum {
+            margin-top: 0.625rem;
+            &__item {
+              margin-top: 0.625rem;
+              a {
+                @include text-base(400, $gray-200);
+              }
+            }
+          }
+          &-social {
+            margin-top: 3rem;
+            .social__enum {
+              display: flex;
+              margin-top: 1rem;
+              @media screen and (max-width: 600px) {
+                justify-content: center;
+              }
+              &-item {
+                margin-left: 1rem;
+                &:first-child {
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import '../other/all.scss';
+
+.tern-title {
+  h1 {
+    @include text-5xl(700, $blue-200);
+    text-align: center;
+    @media screen and (max-width: 700px) {
+      @include text-3xl(700, $blue-200);
+    }
+  }
+}

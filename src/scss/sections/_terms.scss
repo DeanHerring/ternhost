@@ -1,0 +1,37 @@
+@import '../other/all';
+
+.terms {
+  @include center-x;
+  padding: 1.5rem 0;
+  .container {
+    .terms__content {
+      @include center-y;
+      justify-content: space-between;
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+      }
+      h1 {
+        @include text-sm(400, $blue-200);
+        @media screen and (max-width: 600px) {
+          order: 1;
+          margin-top: 1rem;
+        }
+      }
+      .terms__enum {
+        @include center-x;
+        @media screen and (max-width: 600px) {
+          order: 0;
+        }
+        &-item {
+          &:last-child {
+            border-left: 1px solid $blue-200;
+          }
+          &__link {
+            @include text-sm(400, $blue-200);
+            margin: 0 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

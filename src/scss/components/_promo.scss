@@ -1,0 +1,22 @@
+@import '../other/all';
+
+.promo {
+  width: 100%;
+  background-color: $blue-100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  text-decoration: none;
+  text-transform: uppercase;
+  h1 {
+    @include text-lg(700, $white-100);
+    @media screen and (max-width: 500px) {
+      font-size: 0.8em;
+    }
+  }
+  img {
+    width: 24px;
+    margin-left: 10px;
+  }
+}
