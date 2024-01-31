@@ -45,7 +45,7 @@
           h1 {
             @include text-base(700);
           }
-          &-enum {
+          &-group {
             margin-top: 0.625rem;
             &__item {
               margin-top: 0.625rem;
@@ -56,7 +56,7 @@
           }
           &-social {
             margin-top: 3rem;
-            .social__enum {
+            .social__group {
               display: flex;
               margin-top: 1rem;
               @media screen and (max-width: 600px) {

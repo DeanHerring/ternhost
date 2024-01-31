@@ -19,11 +19,7 @@ var swiper = new Swiper('.mySwiper', {
   },
 });
 
-console.log('hello, world');
-
 // Accordion
-
-// TODO: Super-Mega-Duper-Puper-Ultra-Alpha-Beta-Gamma Shitcode
 const accordions = document.querySelectorAll('.accordion');
 
 const initAccordions = (collection) => {

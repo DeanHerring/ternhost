@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "gulp",
-    "build": "cross-env ENVIRONMENT=production npm run gulp"
+    "build": "cross-env ENVIRONMENT=production npm run dev"
   },
   "keywords": [],
   "author": "",

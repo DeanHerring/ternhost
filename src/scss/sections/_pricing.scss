@@ -7,12 +7,12 @@
       flex-direction: column;
       &__time {
         margin: 3rem 0;
-        &-enum {
+        &-group {
           display: flex;
           &__item {
             @include text-lg(700, $blue-100);
             text-transform: uppercase;
-            border: 2px solid $blue-100;
+            border: 0.125rem solid $blue-100;
             padding: 0.5rem 1rem;
             transition: all 0.2s;
             cursor: pointer;
@@ -22,19 +22,19 @@
               color: $white-100;
             }
             &:first-child {
-              border-radius: 10px 0 0 10px;
-              border-right: 1px solid $blue-100;
+              border-radius: 0.625rem 0 0 0.625rem;
+              border-right: 0.063rem solid $blue-100;
             }
             &:last-child {
-              border-radius: 0 10px 10px 0;
-              border-left: 1px solid $blue-100;
+              border-radius: 0 0.625rem 0.625rem 0;
+              border-left: 0.063rem solid $blue-100;
             }
           }
         }
       }
       &__plans {
         width: 100%;
-        &-enum {
+        &-group {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           @media screen and (max-width: 1000px) {
@@ -49,7 +49,7 @@
           &__item {
             width: 100%;
             text-align: center;
-            border-radius: 10px;
+            border-radius: 0.625rem;
             padding: 1.25rem 0;
             &.best {
               background-color: $blue-100;
@@ -76,7 +76,7 @@
                 }
               }
               .plan__column {
-                &-enum {
+                &-group {
                   &__item {
                     h3 {
                       color: $white-100;
@@ -100,7 +100,7 @@
                   }
                   span {
                     @include text-sm(700, $white-100);
-                    border-radius: 5px;
+                    border-radius: 0.313rem;
                     background-color: $blue-200;
                     padding: 0.33rem 0.75rem;
                     margin-left: 0.625rem;
@@ -115,9 +115,9 @@
               }
             }
             .plan__column {
-              &-enum {
+              &-group {
                 &__item {
-                  border-bottom: 1px solid $white-200;
+                  border-bottom: 0.063rem solid $white-200;
                   padding: 0.75rem 0;
                   &:last-child {
                     border-bottom: 0;

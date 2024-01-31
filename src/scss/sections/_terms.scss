@@ -1,10 +1,10 @@
 @import '../other/all';
 
-.terms {
+.terms-wrapper {
   @include center-x;
   padding: 1.5rem 0;
   .container {
-    .terms__content {
+    .terms {
       @include center-y;
       justify-content: space-between;
       @media screen and (max-width: 600px) {
@@ -17,7 +17,7 @@
           margin-top: 1rem;
         }
       }
-      .terms__enum {
+      &__group {
         @include center-x;
         @media screen and (max-width: 600px) {
           order: 0;

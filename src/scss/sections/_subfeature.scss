@@ -1,9 +1,9 @@
 @import '../other/all.scss';
 
-.subhero {
+.subfeature-wrapper {
   background-color: $white-100;
   .container {
-    .subhero__content {
+    .subfeature {
       display: grid;
       grid-template-columns: 1fr 1.5fr;
       grid-gap: 3rem;
@@ -15,7 +15,7 @@
         grid-template-columns: 1fr;
         grid-gap: 3rem;
       }
-      .subhero__domain {
+      &__domain {
         h1 {
           @include text-4xl(700, $blue-200);
           @media screen and (max-width: 1200px) {
@@ -24,7 +24,7 @@
         }
         &-input {
           background-color: $white-200;
-          border-radius: 5px;
+          border-radius: 0.313rem;
           display: flex;
           margin-top: 1rem;
           input {
@@ -38,17 +38,17 @@
             }
           }
           .btn {
-            border-radius: 0 5px 5px 0;
+            border-radius: 0 0.313rem 0.313rem 0;
             @media screen and (max-width: 1200px) {
-              padding: 5px 10px;
+              padding: 0.313rem 0.625rem;
               @include text-base(700, $white-100);
             }
           }
         }
       }
-      .subhero__prices {
+      .subfeature__prices {
         @include center-y;
-        .subhero__list {
+        &-group {
           width: 100%;
           display: grid;
           grid-template-columns: repeat(4, 1fr);
@@ -62,7 +62,7 @@
           @media screen and (max-width: 900px) {
             grid-template-columns: repeat(3, 1fr);
           }
-          .subhero__item {
+          &__item {
             &:nth-child(5),
             &:nth-child(6) {
               display: none;

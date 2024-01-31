@@ -11,6 +11,11 @@ import uglify from 'gulp-terser';
 
 dotenv.config();
 
+const config = {
+  baseDir: './src',
+  outputDir: './docs',
+};
+
 const sass = gulpSass(dartSass);
 
 const isProduction = () => {
@@ -19,53 +24,53 @@ const isProduction = () => {
 
 const html = () => {
   return gulp
-    .src('./src/**/*.html')
+    .src(`${config.baseDir}/**/*.html`)
     .pipe(gulpIf(isProduction(), htmlmin({ collapseWhitespace: true })))
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest(config.outputDir))
     .pipe(browserSync.reload({ stream: true }));
 };
 
 const pug = () => {
   return gulp
-    .src('./src/**/*.pug')
+    .src(`${config.baseDir}/**/*.pug`)
     .pipe(GulpPug({ pretty: true }))
     .pipe(gulpIf(isProduction(), htmlmin({ collapseWhitespace: true })))
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest(config.outputDir))
     .pipe(browserSync.reload({ stream: true }));
 };
 
 const scss = () => {
   return gulp
-    .src('./src/scss/index.scss')
+    .src(`${config.baseDir}/scss/index.scss`)
     .pipe(sass({ outputStyle: isProduction() ? 'compressed' : 'expanded' }).on('error', sass.logError))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest(`${config.outputDir}/css`))
     .pipe(browserSync.reload({ stream: true }));
 };
 
 const js = () => {
   return gulp
-    .src('./src/js/**/*.js')
+    .src(`${config.baseDir}/js/**/*.js`)
     .pipe(gulpIf(isProduction(), uglify()))
-    .pipe(gulp.dest('./dist/js'))
+    .pipe(gulp.dest(`${config.outputDir}/js`))
     .pipe(browserSync.reload({ stream: true }));
 };
 
 const assets = () => {
   return gulp
-    .src('./src/assets/**/*')
-    .pipe(gulp.dest('./dist/assets'))
+    .src(`${config.baseDir}/assets/**/*`)
+    .pipe(gulp.dest(`${config.outputDir}/assets`))
     .pipe(browserSync.reload({ stream: true }));
 };
 
 const clean = () => {
-  return deleteAsync(['./dist']);
+  return deleteAsync([config.outputDir]);
 };
 
 const autoreload = () => {
   browserSync.init({
     open: false,
     server: {
-      baseDir: './dist',
+      baseDir: config.outputDir,
     },
   });
 };
@@ -73,11 +78,11 @@ const autoreload = () => {
 const watchers = () => {
   autoreload();
 
-  gulp.watch('./src/**/*.html', html);
-  gulp.watch('./src/**/*.pug', pug);
-  gulp.watch('./src/scss/**/*.scss', scss);
-  gulp.watch('./src/assets/**/*', assets);
-  gulp.watch('./src/js/**/*.js', js);
+  gulp.watch(`${config.baseDir}/**/*.html`, html);
+  gulp.watch(`${config.baseDir}/**/*.pug`, pug);
+  gulp.watch(`${config.baseDir}/scss/**/*.scss`, scss);
+  gulp.watch(`${config.baseDir}/assets/**/*`, assets);
+  gulp.watch(`${config.baseDir}/js/**/*.js`, js);
 };
 
 const tasks = {

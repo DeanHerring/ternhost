@@ -1,11 +1,11 @@
 @import '../other/all.scss';
 
-.services {
+.services-wrapper {
   background-color: $white-500;
   .container {
-    .services__content {
+    .services {
       margin-top: 5rem;
-      .services__list {
+      &__group {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 5rem;
@@ -19,18 +19,18 @@
           grid-template-columns: 1fr;
           grid-gap: 5rem;
         }
-        .services__item {
+        &-item {
           @include center-y;
           flex-direction: column;
           text-align: center;
-          &-image {
+          &__image {
             @include center;
-            width: 100px;
+            width: 6.25rem;
             aspect-ratio: 1 / 1;
             background-color: $white-400;
-            border-radius: 10px;
+            border-radius: 0.625rem;
           }
-          &-text {
+          &__text {
             h1 {
               @include text-xl(700, $blue-200);
               margin: 1rem 0;

@@ -4,8 +4,9 @@
 @use 'other/default';
 
 // Sections
-@use 'sections/hero';
-@use 'sections/subhero';
+@use 'sections/promo';
+@use 'sections/features';
+@use 'sections/subfeature';
 @use 'sections/services';
 @use 'sections/reviews';
 @use 'sections/counters';
@@ -14,9 +15,6 @@
 @use 'sections/footer';
 @use 'sections/terms';
 
-// Components
-@use 'components/promo';
-
-// Utils
-@use 'utils/section-title';
-@use 'utils/section';
+// Tern
+@use 'tern/section-title';
+@use 'tern/section';

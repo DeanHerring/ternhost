@@ -14,15 +14,17 @@
   <body>
     <main id="wrapper">
       <!-- Promo -->
-      <a href="#" class="promo">
-        <h1>Don't miss deals up to 70% on web hosting</h1>
-        <img src="/assets/images/promo-arrow.svg" alt="Promo Arrow" />
-      </a>
+      <section class="promo-wrapper">
+        <a href="#" class="promo">
+          <h1>Don't miss deals up to 70% on web hosting</h1>
+          <img src="/assets/images/promo-arrow.svg" alt="Promo Arrow" />
+        </a>
+      </section>
 
-      <!-- Hero -->
-      <section class="hero">
-        <div class="hero__background">
-          <img src="./assets/images/hero-background.svg" alt="Hero Background" />
+      <!-- Features -->
+      <section class="features-wrapper">
+        <div class="features-background">
+          <img src="./assets/images/hero-background.svg" alt="Feature Background" />
         </div>
 
         <div class="container">
@@ -32,11 +34,11 @@
               <h1>Ternhost</h1>
             </a>
             <div class="header__menu">
-              <ul class="header__list">
-                <li class="header__item"><a href="#" class="header__link">Domain</a></li>
-                <li class="header__item"><a href="#" class="header__link">Hosting</a></li>
-                <li class="header__item"><a href="#" class="header__link">Website Builder</a></li>
-                <li class="header__item"><a href="#" class="header__link">Help</a></li>
+              <ul class="header__menu-group">
+                <li class="header__menu-group__item"><a href="#">Domain</a></li>
+                <li class="header__menu-group__item"><a href="#">Hosting</a></li>
+                <li class="header__menu-group__item"><a href="#">Website Builder</a></li>
+                <li class="header__menu-group__item"><a href="#">Help</a></li>
               </ul>
 
               <button class="btn btn-primary">Login</button>
@@ -46,8 +48,8 @@
             </div>
           </header>
 
-          <div class="hero__content">
-            <div class="hero__text">
+          <div class="features">
+            <div class="features__text">
               <h1>
                 Fully Managed Cloud <br />
                 & Wordpress Hosting
@@ -64,34 +66,34 @@
       </section>
 
       <!-- Subhero -->
-      <section class="subhero tern-section">
+      <section class="subfeature-wrapper tern-section">
         <div class="container">
-          <div class="subhero__content">
-            <div class="subhero__domain">
+          <div class="subfeature">
+            <div class="subfeature__domain">
               <h1>Search Your Domain Now</h1>
-              <div class="subhero__domain-input">
+              <div class="subfeature__domain-input">
                 <input type="text" placeholder="Search your domain..." />
                 <button class="btn btn-secondary">Find Now</button>
               </div>
             </div>
-            <div class="subhero__prices">
-              <ul class="subhero__list">
-                <li class="subhero__item">
+            <div class="subfeature__prices">
+              <ul class="subfeature__prices-group">
+                <li class="subfeature__prices-group__item">
                   <span>.com</span>
                   <h3>$10 / month</h3>
                   <h1><span>$</span>4.99 <span>/ year</span></h1>
                 </li>
-                <li class="subhero__item">
+                <li class="subfeature__prices-group__item">
                   <span>.in</span>
                   <h3>$10 / month</h3>
                   <h1><span>$</span>0.99 <span>/ year</span></h1>
                 </li>
-                <li class="subhero__item">
+                <li class="subfeature__prices-group__item">
                   <span>.shop</span>
                   <h3>$10 / month</h3>
                   <h1><span>$</span>1.99 <span>/ year</span></h1>
                 </li>
-                <li class="subhero__item">
+                <li class="subfeature__prices-group__item">
                   <span>.nl</span>
                   <h3>$10 / month</h3>
                   <h1><span>$</span>2.99 <span>/ year</span></h1>
@@ -103,19 +105,19 @@
       </section>
 
       <!-- Services -->
-      <section class="services tern-section">
+      <section class="services-wrapper tern-section">
         <div class="container">
           <header class="tern-title">
             <h1>Our Services</h1>
           </header>
 
-          <div class="services__content">
-            <ul class="services__list">
-              <li class="services__item">
-                <div class="services__item-image">
+          <div class="services">
+            <ul class="services__group">
+              <li class="services__group-item">
+                <div class="services__group-item__image">
                   <img src="./assets/images/services-image-1.svg" alt="Service" />
                 </div>
-                <div class="services__item-text">
+                <div class="services__group-item__text">
                   <h1>Shared Web Hosting</h1>
                   <p>
                     Vestibulum tristique urna eget odio interdum pellentesque. In sodales venenatis lectus, ac tincidunt
@@ -123,11 +125,11 @@
                   </p>
                 </div>
               </li>
-              <li class="services__item">
-                <div class="services__item-image">
+              <li class="services__group-item">
+                <div class="services__group-item__image">
                   <img src="./assets/images/services-image-2.svg" alt="Service" />
                 </div>
-                <div class="services__item-text">
+                <div class="services__group-item__text">
                   <h1>24/7/365 Support</h1>
                   <p>
                     Vestibulum tristique urna eget odio interdum pellentesque. In sodales venenatis lectus, ac tincidunt
@@ -135,11 +137,11 @@
                   </p>
                 </div>
               </li>
-              <li class="services__item">
-                <div class="services__item-image">
+              <li class="services__group-item">
+                <div class="services__group-item__image">
                   <img src="./assets/images/services-image-3.svg" alt="Service" />
                 </div>
-                <div class="services__item-text">
+                <div class="services__group-item__text">
                   <h1>Dedicated Server</h1>
                   <p>
                     Vestibulum tristique urna eget odio interdum pellentesque. In sodales venenatis lectus, ac tincidunt
@@ -147,11 +149,11 @@
                   </p>
                 </div>
               </li>
-              <li class="services__item">
-                <div class="services__item-image">
+              <li class="services__group-item">
+                <div class="services__group-item__image">
                   <img src="./assets/images/services-image-4.svg" alt="Service" />
                 </div>
-                <div class="services__item-text">
+                <div class="services__group-item__text">
                   <h1>Cloud Hosting</h1>
                   <p>
                     Vestibulum tristique urna eget odio interdum pellentesque. In sodales venenatis lectus, ac tincidunt
@@ -159,11 +161,11 @@
                   </p>
                 </div>
               </li>
-              <li class="services__item">
-                <div class="services__item-image">
+              <li class="services__group-item">
+                <div class="services__group-item__image">
                   <img src="./assets/images/services-image-5.svg" alt="Service" />
                 </div>
-                <div class="services__item-text">
+                <div class="services__group-item__text">
                   <h1>Domain Names</h1>
                   <p>
                     Vestibulum tristique urna eget odio interdum pellentesque. In sodales venenatis lectus, ac tincidunt
@@ -171,11 +173,11 @@
                   </p>
                 </div>
               </li>
-              <li class="services__item">
-                <div class="services__item-image">
+              <li class="services__group-item">
+                <div class="services__group-item__image">
                   <img src="./assets/images/services-image-6.svg" alt="Service" />
                 </div>
-                <div class="services__item-text">
+                <div class="services__group-item__text">
                   <h1>License Keys</h1>
                   <p>
                     Vestibulum tristique urna eget odio interdum pellentesque. In sodales venenatis lectus, ac tincidunt
@@ -189,13 +191,13 @@
       </section>
 
       <!-- Reviews -->
-      <section class="reviews tern-section">
+      <section class="reviews-wrapper tern-section">
         <div class="container">
           <header class="tern-title">
             <h1>Word From Our Clients</h1>
           </header>
 
-          <div class="reviews__content">
+          <div class="reviews">
             <!-- Swiper -->
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
@@ -309,15 +311,15 @@
 
           <div class="pricing">
             <div class="pricing__time">
-              <ul class="pricing__time-enum">
-                <li class="pricing__time-enum__item">12 Month</li>
-                <li class="pricing__time-enum__item active">36 Month</li>
+              <ul class="pricing__time-group">
+                <li class="pricing__time-group__item">12 Month</li>
+                <li class="pricing__time-group__item active">36 Month</li>
               </ul>
             </div>
 
             <div class="pricing__plans">
-              <ul class="pricing__plans-enum">
-                <li class="pricing__plans-enum__item">
+              <ul class="pricing__plans-group">
+                <li class="pricing__plans-group__item">
                   <header class="plan__header">
                     <h1>Premium</h1>
                     <div class="plan__header-price">
@@ -330,26 +332,26 @@
                   </header>
 
                   <div class="plan__column">
-                    <ul class="plan__column-enum">
-                      <li class="plan__column-enum__item">
+                    <ul class="plan__column-group">
+                      <li class="plan__column-group__item">
                         <h3>Host 5 <span>Domain</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>2GB NVMe <span>Storage</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>50GB <span>Bandwidth</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>Free <span>SSL Certificate</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>24/7 <span>Support</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>2GB NVMe <span>Storage</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>Free <span>SSL Certificate</span></h3>
                       </li>
                     </ul>
@@ -359,7 +361,7 @@
                     <button class="btn btn-primary">Buy Now</button>
                   </footer>
                 </li>
-                <li class="pricing__plans-enum__item best">
+                <li class="pricing__plans-group__item best">
                   <header class="plan__header">
                     <h1>Business</h1>
                     <div class="plan__header-price">
@@ -372,26 +374,26 @@
                   </header>
 
                   <div class="plan__column">
-                    <ul class="plan__column-enum">
-                      <li class="plan__column-enum__item">
+                    <ul class="plan__column-group">
+                      <li class="plan__column-group__item">
                         <h3>Host 5 <span>Domain</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>2GB NVMe <span>Storage</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>50GB <span>Bandwidth</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>Free <span>SSL Certificate</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>24/7 <span>Support</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>2GB NVMe <span>Storage</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>Free <span>SSL Certificate</span></h3>
                       </li>
                     </ul>
@@ -401,7 +403,7 @@
                     <button class="btn btn-primary">Buy Now</button>
                   </footer>
                 </li>
-                <li class="pricing__plans-enum__item">
+                <li class="pricing__plans-group__item">
                   <header class="plan__header">
                     <h1>Online Store</h1>
                     <div class="plan__header-price">
@@ -414,26 +416,26 @@
                   </header>
 
                   <div class="plan__column">
-                    <ul class="plan__column-enum">
-                      <li class="plan__column-enum__item">
+                    <ul class="plan__column-group">
+                      <li class="plan__column-group__item">
                         <h3>Host 5 <span>Domain</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>2GB NVMe <span>Storage</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>50GB <span>Bandwidth</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>Free <span>SSL Certificate</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>24/7 <span>Support</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>2GB NVMe <span>Storage</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>Free <span>SSL Certificate</span></h3>
                       </li>
                     </ul>
@@ -443,7 +445,7 @@
                     <button class="btn btn-primary">Buy Now</button>
                   </footer>
                 </li>
-                <li class="pricing__plans-enum__item">
+                <li class="pricing__plans-group__item">
                   <header class="plan__header">
                     <h1>Pro</h1>
                     <div class="plan__header-price">
@@ -456,26 +458,26 @@
                   </header>
 
                   <div class="plan__column">
-                    <ul class="plan__column-enum">
-                      <li class="plan__column-enum__item">
+                    <ul class="plan__column-group">
+                      <li class="plan__column-group__item">
                         <h3>Host 5 <span>Domain</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>2GB NVMe <span>Storage</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>50GB <span>Bandwidth</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>Free <span>SSL Certificate</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>24/7 <span>Support</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>2GB NVMe <span>Storage</span></h3>
                       </li>
-                      <li class="plan__column-enum__item">
+                      <li class="plan__column-group__item">
                         <h3>Free <span>SSL Certificate</span></h3>
                       </li>
                     </ul>
@@ -491,16 +493,15 @@
         </div>
       </section>
 
-      <!-- TODO: Do it later -->
       <!-- FAQ -->
       <section class="faq-wrapper tern-section">
         <div class="container">
           <header class="tern-title">
-            <h1>Have a question? FAQ (Fuck You xD)</h1>
+            <h1>Have a question? FAQ</h1>
           </header>
 
           <div class="faq">
-            <ul class="faq__enum">
+            <ul class="faq__group">
               <li class="accordion">
                 <header class="accordion__head">
                   <h1>What is Web Hosting?</h1>
@@ -598,49 +599,49 @@
               <div class="footer__menu">
                 <h1>Quick Links</h1>
 
-                <ul class="footer__menu-enum">
-                  <li class="footer__menu-enum__item"><a href="#">Home</a></li>
-                  <li class="footer__menu-enum__item"><a href="#">About Us</a></li>
-                  <li class="footer__menu-enum__item"><a href="#">Services</a></li>
-                  <li class="footer__menu-enum__item"><a href="#">Contact Us</a></li>
+                <ul class="footer__menu-group">
+                  <li class="footer__menu-group__item"><a href="#">Home</a></li>
+                  <li class="footer__menu-group__item"><a href="#">About Us</a></li>
+                  <li class="footer__menu-group__item"><a href="#">Services</a></li>
+                  <li class="footer__menu-group__item"><a href="#">Contact Us</a></li>
                 </ul>
               </div>
               <div class="footer__menu">
                 <h1>Services</h1>
 
-                <ul class="footer__menu-enum">
-                  <li class="footer__menu-enum__item"><a href="#">Shared Web Hosting</a></li>
-                  <li class="footer__menu-enum__item"><a href="#">VPS Hosting</a></li>
-                  <li class="footer__menu-enum__item"><a href="#">Dedicated Server</a></li>
-                  <li class="footer__menu-enum__item"><a href="#">Cloud Hosting</a></li>
-                  <li class="footer__menu-enum__item"><a href="#">Domain Names</a></li>
-                  <li class="footer__menu-enum__item"><a href="#">License Keys</a></li>
+                <ul class="footer__menu-group">
+                  <li class="footer__menu-group__item"><a href="#">Shared Web Hosting</a></li>
+                  <li class="footer__menu-group__item"><a href="#">VPS Hosting</a></li>
+                  <li class="footer__menu-group__item"><a href="#">Dedicated Server</a></li>
+                  <li class="footer__menu-group__item"><a href="#">Cloud Hosting</a></li>
+                  <li class="footer__menu-group__item"><a href="#">Domain Names</a></li>
+                  <li class="footer__menu-group__item"><a href="#">License Keys</a></li>
                 </ul>
               </div>
               <div class="footer__menu">
                 <h1>Contact Us</h1>
 
-                <ul class="footer__menu-enum">
-                  <li class="footer__menu-enum__item"><a href="#">shield.info@gmail.com</a></li>
-                  <li class="footer__menu-enum__item"><a href="#">+91 - 99xxx 000xx</a></li>
+                <ul class="footer__menu-group">
+                  <li class="footer__menu-group__item"><a href="#">shield.info@gmail.com</a></li>
+                  <li class="footer__menu-group__item"><a href="#">+91 - 99xxx 000xx</a></li>
                 </ul>
 
                 <div class="footer__menu-social">
                   <h1>Follow Us</h1>
 
-                  <ul class="social__enum">
-                    <li class="social__enum-item">
-                      <a href="#" class="social__enum-item__link">
+                  <ul class="social__group">
+                    <li class="social__group-item">
+                      <a href="#" class="social__group-item__link">
                         <img src="./assets/images/facebook.svg" alt="Facebook" />
                       </a>
                     </li>
-                    <li class="social__enum-item">
-                      <a href="#" class="social__enum-item__link">
+                    <li class="social__group-item">
+                      <a href="#" class="social__group-item__link">
                         <img src="./assets/images/twitter.svg" alt="Twitter" />
                       </a>
                     </li>
-                    <li class="social__enum-item">
-                      <a href="#" class="social__enum-item__link">
+                    <li class="social__group-item">
+                      <a href="#" class="social__group-item__link">
                         <img src="./assets/images/youtube.svg" alt="Youtube" />
                       </a>
                     </li>
@@ -653,13 +654,13 @@
       </footer>
 
       <!-- Terms of Use -->
-      <section class="terms">
+      <section class="terms-wrapper">
         <div class="container">
-          <div class="terms__content">
+          <div class="terms">
             <h1>© Copyright Ⓒ TernHost. All Rights Reserved.</h1>
-            <ul class="terms__enum">
-              <li class="terms__enum-item"><a href="#" class="terms__enum-item__link">Privacy Policy</a></li>
-              <li class="terms__enum-item"><a href="#" class="terms__enum-item__link">Terms Condition</a></li>
+            <ul class="terms__group">
+              <li class="terms__group-item"><a href="#" class="terms__group-item__link">Privacy Policy</a></li>
+              <li class="terms__group-item"><a href="#" class="terms__group-item__link">Terms Condition</a></li>
             </ul>
           </div>
         </div>
@@ -668,12 +669,6 @@
 
     <!-- Libs -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
-      integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
 
     <!-- Scripts -->
     <script src="/js/index.js"></script>
