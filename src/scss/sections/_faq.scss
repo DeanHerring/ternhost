@@ -1,0 +1,52 @@
+@import '../other/all';
+
+.faq-wrapper {
+  .container {
+    .faq {
+      margin-top: 3rem;
+      &__enum {
+        .accordion {
+          border: 1px solid $gray-200;
+          cursor: pointer;
+          box-shadow: 0 4px 19px 0 rgba($green-100, 0.33);
+          user-select: none;
+          margin-top: 1.5rem;
+          &.show {
+            .accordion__body {
+              display: block;
+            }
+          }
+          &__head,
+          &__body {
+            padding: 0.75rem 1.5rem;
+          }
+          &__head {
+            @include center-y;
+            justify-content: space-between;
+            background-color: $white-100;
+            h1 {
+              @include text-2xl(600, $blue-200);
+              @media screen and (max-width: 1000px) {
+                @include text-lg(600, $blue-200);
+              }
+            }
+            img {
+              &.reverse {
+                transform: rotate(180deg);
+              }
+            }
+          }
+          &__body {
+            display: none;
+            p {
+              @include text-base(500, rgba($blue-200, 0.5));
+              @media screen and (max-width: 600px) {
+                @include text-sm(500, rgba($blue-200, 0.5));
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
