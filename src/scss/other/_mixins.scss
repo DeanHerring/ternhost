@@ -1,98 +1,92 @@
 @import 'variables';
 
-@mixin text-sm($weight: 400, $color: $black-100) {
-  font-family: $poppins;
-  font-size: 0.875rem; // 14px
+// 14px
+@mixin text-xs($weight: 400, $color: $black-100) {
+  font: $weight 0.75rem $poppins;
   line-height: 1.25rem;
-  font-weight: $weight;
   color: $color;
 }
 
+@mixin text-sm($weight: 400, $color: $black-100) {
+  font: $weight 0.875rem $poppins;
+  line-height: 1.25rem;
+  color: $color;
+}
+
+// 16px
 @mixin text-base($weight: 400, $color: $black-100) {
-  font-family: $poppins;
-  font-size: 1em; // 16px
+  font: $weight 1rem $poppins;
   line-height: 1.5rem;
-  font-weight: $weight;
   color: $color;
 }
 
+// 18px
 @mixin text-lg($weight: 400, $color: $black-100) {
-  font-family: $poppins;
-  font-size: 1.125em; // 18px
+  font: $weight 1.125rem $poppins;
   line-height: 1.75rem;
-  font-weight: $weight;
   color: $color;
 }
 
+// 20px
 @mixin text-xl($weight: 400, $color: $black-100) {
-  font-family: $poppins;
-  font-size: 1.25em; // 20px
+  font: $weight 1.25rem $poppins;
   line-height: 1.75rem;
-  font-weight: $weight;
   color: $color;
 }
 
+// 24px
 @mixin text-2xl($weight: 400, $color: $black-100) {
-  font-family: $poppins;
-  font-size: 1.5em; // 24px
+  font: $weight 1.5rem $poppins;
   line-height: 2rem;
-  font-weight: $weight;
   color: $color;
 }
 
+// 30px
 @mixin text-3xl($weight: 400, $color: $black-100) {
-  font-family: $poppins;
-  font-size: 1.875em; // 30px
+  font: $weight 1.875rem $poppins;
   line-height: 2.25rem;
-  font-weight: $weight;
   color: $color;
 }
 
+// 36px
 @mixin text-4xl($weight: 400, $color: $black-100) {
-  font-family: $poppins;
-  font-size: 2.25em; // 36px
+  font: $weight 2.25rem $poppins;
   line-height: 2.5rem;
-  font-weight: $weight;
   color: $color;
 }
 
+// 48px
 @mixin text-5xl($weight: 400, $color: $black-100) {
-  font-family: $poppins;
-  font-size: 3em; // 48px
+  font: $weight 3rem $poppins;
   line-height: 1;
-  font-weight: $weight;
   color: $color;
 }
 
+// 60px
 @mixin text-6xl($weight: 400, $color: $black-100) {
-  font-family: $poppins;
-  font-size: 3.75rem; // 60px
+  font: $weight 3.75rem $poppins;
   line-height: 1;
-  font-weight: $weight;
   color: $color;
 }
 
+// 72px
 @mixin text-7xl($weight: 400, $color: $black-100) {
-  font-family: $poppins;
-  font-size: 4.5em; // 72px
+  font: $weight 4.5rem $poppins;
   line-height: 1;
-  font-weight: $weight;
   color: $color;
 }
 
+// 96px
 @mixin text-8xl($weight: 400, $color: $black-100) {
-  font-family: $poppins;
-  font-size: 6em; // 96px
+  font: $weight 6rem $poppins;
   line-height: 1.75rem;
-  font-weight: $weight;
   color: $color;
 }
 
+// 128px
 @mixin text-9xl($weight: 400, $color: $black-100) {
-  font-family: $poppins;
-  font-size: 8em; // 128px
+  font: $weight 8rem $poppins;
   line-height: 1.75rem;
-  font-weight: $weight;
   color: $color;
 }
 
@@ -101,10 +95,12 @@
   justify-content: center;
   align-items: center;
 }
+
 @mixin center-x {
   display: flex;
   justify-content: center;
 }
+
 @mixin center-y {
   display: flex;
   align-items: center;

@@ -5,15 +5,10 @@
   .container {
     .subfeature {
       display: grid;
-      grid-template-columns: 1fr 1.5fr;
+      grid-template-columns: 1fr 2fr;
       grid-gap: 3rem;
-      @media screen and (max-width: 1200px) {
-        grid-template-columns: 0.75fr 1fr;
-        grid-gap: 1rem;
-      }
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 1100px) {
         grid-template-columns: 1fr;
-        grid-gap: 3rem;
       }
       &__domain {
         h1 {
@@ -33,16 +28,14 @@
             background-color: rgba(0, 0, 0, 0);
             padding: 0 1rem;
             @media screen and (max-width: 1200px) {
-              padding: 0 0.5rem;
               @include text-sm;
+              padding: 1rem;
             }
           }
           .btn {
+            @include text-sm(700, $white-100);
             border-radius: 0 0.313rem 0.313rem 0;
-            @media screen and (max-width: 1200px) {
-              padding: 0.313rem 0.625rem;
-              @include text-base(700, $white-100);
-            }
+            text-wrap: nowrap;
           }
         }
       }
@@ -53,42 +46,10 @@
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           grid-gap: 1rem;
-          @media screen and (max-width: 1400px) {
-            grid-template-columns: repeat(3, 1fr);
-          }
-          @media screen and (max-width: 1000px) {
-            grid-template-columns: repeat(2, 1fr);
-          }
-          @media screen and (max-width: 900px) {
-            grid-template-columns: repeat(3, 1fr);
+          @media screen and (max-width: 700px) {
+            grid-template-columns: 1fr 1fr;
           }
           &__item {
-            &:nth-child(5),
-            &:nth-child(6) {
-              display: none;
-            }
-            @media screen and (max-width: 1400px) {
-              &:nth-child(4) {
-                display: none;
-              }
-            }
-            @media screen and (max-width: 1000px) {
-              &:nth-child(3),
-              &:nth-child(4) {
-                display: none;
-              }
-            }
-            @media screen and (max-width: 900px) {
-              &:nth-child(3),
-              &:nth-child(4) {
-                display: block;
-              }
-            }
-            @media screen and (max-width: 500px) {
-              h1 {
-                display: none;
-              }
-            }
             span {
               @include text-xl(700, $blue-100);
             }

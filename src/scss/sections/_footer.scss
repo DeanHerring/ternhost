@@ -23,6 +23,7 @@
           @include center-y;
           h1 {
             @include text-4xl(700, $blue-200);
+            text-transform: uppercase;
             margin-left: 0.625rem;
           }
         }
