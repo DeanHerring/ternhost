@@ -1,0 +1,20 @@
+@use 'other/reset';
+@use 'other/fonts';
+@use 'other/variables';
+@use 'other/default';
+
+// Sections
+@use 'sections/home/promo';
+@use 'sections/home/features';
+@use 'sections/home/subfeature';
+@use 'sections/home/services';
+@use 'sections/home/reviews';
+@use 'sections/home/counters';
+@use 'sections/home/pricing';
+@use 'sections/home/faq';
+@use 'sections/home/footer';
+@use 'sections/home/terms';
+
+// Tern
+@use 'tern/section-title';
+@use 'tern/section';

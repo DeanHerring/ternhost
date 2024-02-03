@@ -41,7 +41,7 @@ const pug = () => {
 
 const scss = () => {
   return gulp
-    .src(`${config.baseDir}/scss/index.scss`)
+    .src(`${config.baseDir}/scss/*.scss`)
     .pipe(sass({ outputStyle: isProduction() ? 'compressed' : 'expanded' }).on('error', sass.logError))
     .pipe(gulp.dest(`${config.outputDir}/css`))
     .pipe(browserSync.reload({ stream: true }));

@@ -1,0 +1,12 @@
+@use 'tern/header';
+
+@import 'other/all';
+
+.features-wrapper {
+  @include center-x;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: $white-300;
+  background-image: url('../assets/domain-feature-background.svg');
+}

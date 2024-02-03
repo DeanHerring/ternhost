@@ -1,0 +1,45 @@
+@import 'other/all';
+
+.header {
+  @include center-y;
+  justify-content: space-between;
+  padding: 0.938rem 0;
+  position: relative;
+  z-index: 10;
+  &__logo {
+    @include center-y;
+    text-decoration: none;
+    h1 {
+      @include text-4xl(700, $blue-200);
+      text-transform: uppercase;
+      margin-left: 0.625rem;
+      @media screen and (max-width: 500px) {
+        font-size: 1.75rem;
+      }
+    }
+  }
+  &__menu {
+    @include center-y;
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+    &-group {
+      display: flex;
+      &__item {
+        margin-left: 2.5rem;
+        a {
+          @include text-base(500, $blue-200);
+        }
+      }
+    }
+    .btn {
+      margin-left: 2.5rem;
+    }
+  }
+  &__menu-mobile {
+    display: none;
+    @media screen and (max-width: 1024px) {
+      display: block;
+    }
+  }
+}
