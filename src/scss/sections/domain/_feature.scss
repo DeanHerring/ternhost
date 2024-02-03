@@ -4,9 +4,100 @@
 
 .features-wrapper {
   @include center-x;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  background-color: $white-300;
-  background-image: url('../assets/domain-feature-background.svg');
+  min-height: 100vh;
+  background-color: $white-100;
+  .container {
+    display: flex;
+    flex-direction: column;
+    .feature {
+      @include center-x;
+      flex-grow: 1;
+      background-image: url('/assets/images/domain-feature-background.svg');
+      background-repeat: no-repeat;
+      background-position: 100% 0;
+      flex-direction: column;
+      padding: 5rem 0;
+      @media screen and (max-width: 900px) {
+        background-position: 150% 0;
+      }
+      @media screen and (max-width: 600px) {
+        background-image: none;
+      }
+      &__domain {
+        max-width: 40%;
+        @media screen and (max-width: 1000px) {
+          max-width: 60%;
+        }
+        @media screen and (max-width: 600px) {
+          max-width: 100%;
+          text-align: center;
+        }
+        h1 {
+          @include text-4xl(700, $blue-200);
+          @media screen and (max-width: 1200px) {
+            @include text-2xl(700, $blue-200);
+          }
+        }
+        &-input {
+          background-color: $white-200;
+          border-radius: 0.313rem;
+          display: flex;
+          margin: 1rem 0;
+          input {
+            @include text-base;
+            flex-grow: 1;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 0 1rem;
+            @media screen and (max-width: 1200px) {
+              @include text-sm;
+              padding: 1rem;
+            }
+          }
+          .btn {
+            @include text-sm(700, $white-100);
+            border-radius: 0 0.313rem 0.313rem 0;
+            text-wrap: nowrap;
+          }
+        }
+        h2 {
+          @include text-xl(600, $blue-200);
+          a {
+            color: $blue-100;
+          }
+        }
+      }
+      &__prices {
+        background-color: $white-100;
+        padding: 2rem 0;
+        margin: 5rem 0;
+        @include center-y;
+        &-group {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          grid-gap: 1rem;
+          @media screen and (max-width: 800px) {
+            grid-template-columns: 1fr 1fr;
+          }
+          &__item {
+            span {
+              @include text-xl(700, $blue-100);
+            }
+            h3 {
+              @include text-sm(500, $gray-200);
+            }
+            h1 {
+              @include text-4xl(700, $blue-200);
+              span {
+                @include text-sm(400, $blue-200);
+              }
+            }
+          }
+        }
+      }
+      &__btn {
+        @include center;
+      }
+    }
+  }
 }

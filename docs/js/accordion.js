@@ -1,0 +1,1 @@
+const accordions=document.querySelectorAll(".accordion"),initAccordions=c=>{c.forEach((c=>{c.addEventListener("click",(c=>{const o=c.target,e=o.closest(".accordion"),s=o.querySelector(".accordion__head-switch");e.classList.toggle("show"),s.classList.toggle("reverse")}))}))};initAccordions(accordions);
