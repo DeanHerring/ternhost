@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ternhost | Login</title>
+    <title>Ternhost | Signup</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/signup.css" />
   </head>
   <body>
     <main id="wrapper">
@@ -33,42 +33,37 @@
               </h3>
             </div>
 
-            <div class="login">
-              <header class="login__header">
-                <div class="login__header-title">
+            <div class="signup">
+              <header class="signup__header">
+                <div class="signup__header-title">
                   <h2>Welcome to <span>Ternhost</span></h2>
-                  <h1>Sign In</h1>
+                  <h1>Sign Up</h1>
                 </div>
-                <div class="login__header-signup">
-                  <h3>No Account? <br /><a href="#">Sign Up</a></h3>
+                <div class="signup__header-signup">
+                  <h3>No Account? <br /><a href="#">Sign In</a></h3>
                 </div>
               </header>
-              <div class="login__social">
-                <ul class="login__social-group">
-                  <li class="login__social-group__item">
-                    <img src="/assets/images/login-google-icon.svg" alt="Icon" />
-                    <h3>Sign in with Google</h3>
-                  </li>
-                  <li class="login__social-group__item">
-                    <img src="/assets/images/login-facebook-icon.svg" alt="Icon" />
-                  </li>
-                  <li class="login__social-group__item">
-                    <img src="/assets/images/login-apple-icon.svg" alt="Icon" />
-                  </li>
-                </ul>
-              </div>
-              <form class="login__form">
-                <div class="login__form-group">
+              <form class="signup__form">
+                <div class="signup__form-group">
                   <label>Enter your username or email address</label>
                   <input type="text" placeholder="Username or email address" />
                 </div>
-                <div class="login__form-group">
-                  <label>Enter your Password</label>
-                  <input type="text" placeholder="Password" />
-                  <a href="#">Forgot Password</a>
+                <div class="signup__form-group">
+                  <label>Mobile Number</label>
+                  <input type="text" placeholder="Mobile Number" />
                 </div>
-                <div class="login__form-button">
-                  <button>Sign In</button>
+                <div class="signup__form-grid">
+                  <div class="signup__form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Password" />
+                  </div>
+                  <div class="signup__form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" placeholder="Confirm Password" />
+                  </div>
+                </div>
+                <div class="signup__form-button">
+                  <button>Register</button>
                 </div>
               </form>
             </div>
@@ -84,7 +79,7 @@
       <section class="accounts">
         <div class="container">
           <header class="accounts__header">
-            <h1>Login as</h1>
+            <h1>signup as</h1>
           </header>
 
           <div class="profiles">

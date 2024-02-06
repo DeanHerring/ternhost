@@ -3,8 +3,7 @@
 @use 'common/default';
 
 @import 'common/fluid-type';
-@import 'common/variables';
-@import 'common/mixins';
+@import 'common/all';
 
 .hero {
   width: 100%;
@@ -35,7 +34,7 @@
       }
     }
     .hero-group {
-      margin: 2.5rem 0;
+      margin: 1.875rem 0;
       .hero-text {
         margin-top: 5rem;
         @media screen and (max-width: 900px) {
@@ -56,7 +55,7 @@
           max-width: 18.75rem;
         }
       }
-      .login {
+      .signup {
         background-color: $white-100;
         position: absolute;
         bottom: 0;
@@ -65,6 +64,7 @@
         border-radius: 1.875rem;
         transform: translateY(50%);
         box-shadow: 0 0.25rem 2.188rem 0 rgba($black-100, 0.08);
+        max-width: 500px;
         @media screen and (max-width: 900px) {
           position: static;
           display: inline-block;
@@ -105,35 +105,13 @@
             }
           }
         }
-        &__social {
-          margin-top: 3.125rem;
-          @media screen and (max-width: 500px) {
-            margin-top: 2.188rem;
-          }
-          &-group {
-            display: grid;
-            grid-template-columns: 5fr 1fr 1fr;
-            grid-gap: 0.75rem;
-            @media screen and (max-width: 900px) {
-              grid-template-columns: 4fr 1fr 1fr;
-              grid-gap: 0.25rem;
-            }
-            &__item {
-              @include center;
-              background-color: $white-200;
-              border-radius: 0.625rem;
-              padding: 0.5rem 0;
-              cursor: pointer;
-              h3 {
-                @include fluid-type($text-xs, $text-base);
-                @include text(400, $blue-100);
-                margin-left: 0.5rem;
-              }
-            }
-          }
-        }
         &__form {
           margin-top: 3.125rem;
+          &-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1.25rem;
+          }
           &-group {
             display: flex;
             flex-direction: column;
@@ -147,6 +125,7 @@
               @include text(400, $black-100);
             }
             input {
+              width: 100%;
               border-radius: 0.313rem;
               border: 0.063rem solid $gray-100;
               padding: 1.25rem 1.563rem;

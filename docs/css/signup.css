@@ -216,7 +216,7 @@ input {
   }
 }
 .hero .container .hero-group {
-  margin: 2.5rem 0;
+  margin: 1.875rem 0;
 }
 .hero .container .hero-group .hero-text {
   margin-top: 5rem;
@@ -282,7 +282,7 @@ input {
     font-size: 14px;
   }
 }
-.hero .container .hero-group .login {
+.hero .container .hero-group .signup {
   background-color: #fff;
   position: absolute;
   bottom: 0;
@@ -291,9 +291,10 @@ input {
   border-radius: 1.875rem;
   transform: translateY(50%);
   box-shadow: 0 0.25rem 2.188rem 0 rgba(0, 0, 0, 0.08);
+  max-width: 500px;
 }
 @media screen and (max-width: 900px) {
-  .hero .container .hero-group .login {
+  .hero .container .hero-group .signup {
     position: static;
     display: inline-block;
     top: 0;
@@ -302,205 +303,164 @@ input {
     padding: 1.625rem;
   }
 }
-.hero .container .hero-group .login__header {
+.hero .container .hero-group .signup__header {
   display: flex;
   justify-content: center;
   justify-content: space-between;
 }
-.hero .container .hero-group .login__header-title h2 {
+.hero .container .hero-group .signup__header-title h2 {
   font-family: "Poppins", sans-serif;
   color: #000;
   font-weight: 400;
 }
-.hero .container .hero-group .login__header-title h2 {
+.hero .container .hero-group .signup__header-title h2 {
   font-size: 16px;
 }
 @media screen and (min-width: 360px) {
-  .hero .container .hero-group .login__header-title h2 {
+  .hero .container .hero-group .signup__header-title h2 {
     font-size: calc(16px + 4 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .hero .container .hero-group .login__header-title h2 {
+  .hero .container .hero-group .signup__header-title h2 {
     font-size: 20px;
   }
 }
-.hero .container .hero-group .login__header-title h2 span {
+.hero .container .hero-group .signup__header-title h2 span {
   font-family: "Poppins", sans-serif;
   color: #0098ff;
   font-weight: 700;
   text-transform: uppercase;
 }
-.hero .container .hero-group .login__header-title h1 {
+.hero .container .hero-group .signup__header-title h1 {
   font-family: "Poppins", sans-serif;
   color: #000;
   font-weight: 700;
   margin-top: 1rem;
 }
-.hero .container .hero-group .login__header-title h1 {
+.hero .container .hero-group .signup__header-title h1 {
   font-size: 36px;
 }
 @media screen and (min-width: 360px) {
-  .hero .container .hero-group .login__header-title h1 {
+  .hero .container .hero-group .signup__header-title h1 {
     font-size: calc(36px + 12 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .hero .container .hero-group .login__header-title h1 {
+  .hero .container .hero-group .signup__header-title h1 {
     font-size: 48px;
   }
 }
-.hero .container .hero-group .login__header-signup {
+.hero .container .hero-group .signup__header-signup {
   margin-left: 5rem;
 }
 @media screen and (max-width: 900px) {
-  .hero .container .hero-group .login__header-signup {
+  .hero .container .hero-group .signup__header-signup {
     margin-left: 1rem;
   }
 }
-.hero .container .hero-group .login__header-signup h3 {
+.hero .container .hero-group .signup__header-signup h3 {
   font-family: "Poppins", sans-serif;
   color: #b4b4cf;
   font-weight: 400;
 }
-.hero .container .hero-group .login__header-signup h3 {
+.hero .container .hero-group .signup__header-signup h3 {
   font-size: 12px;
 }
 @media screen and (min-width: 360px) {
-  .hero .container .hero-group .login__header-signup h3 {
+  .hero .container .hero-group .signup__header-signup h3 {
     font-size: calc(12px + 2 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .hero .container .hero-group .login__header-signup h3 {
+  .hero .container .hero-group .signup__header-signup h3 {
     font-size: 14px;
   }
 }
-.hero .container .hero-group .login__header-signup h3 a {
+.hero .container .hero-group .signup__header-signup h3 a {
   color: #0098ff;
 }
-.hero .container .hero-group .login__social {
+.hero .container .hero-group .signup__form {
   margin-top: 3.125rem;
 }
-@media screen and (max-width: 500px) {
-  .hero .container .hero-group .login__social {
-    margin-top: 2.188rem;
-  }
-}
-.hero .container .hero-group .login__social-group {
+.hero .container .hero-group .signup__form-grid {
   display: grid;
-  grid-template-columns: 5fr 1fr 1fr;
-  grid-gap: 0.75rem;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.25rem;
 }
-@media screen and (max-width: 900px) {
-  .hero .container .hero-group .login__social-group {
-    grid-template-columns: 4fr 1fr 1fr;
-    grid-gap: 0.25rem;
-  }
-}
-.hero .container .hero-group .login__social-group__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f6f6f6;
-  border-radius: 0.625rem;
-  padding: 0.5rem 0;
-  cursor: pointer;
-}
-.hero .container .hero-group .login__social-group__item h3 {
-  font-family: "Poppins", sans-serif;
-  color: #0098ff;
-  font-weight: 400;
-  margin-left: 0.5rem;
-}
-.hero .container .hero-group .login__social-group__item h3 {
-  font-size: 12px;
-}
-@media screen and (min-width: 360px) {
-  .hero .container .hero-group .login__social-group__item h3 {
-    font-size: calc(12px + 4 * (100vw - 360px) / 1560);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .hero .container .hero-group .login__social-group__item h3 {
-    font-size: 16px;
-  }
-}
-.hero .container .hero-group .login__form {
-  margin-top: 3.125rem;
-}
-.hero .container .hero-group .login__form-group {
+.hero .container .hero-group .signup__form-group {
   display: flex;
   flex-direction: column;
   margin-top: 2.5rem;
 }
 @media screen and (max-width: 500px) {
-  .hero .container .hero-group .login__form-group {
+  .hero .container .hero-group .signup__form-group {
     margin-top: 1.875rem;
   }
 }
-.hero .container .hero-group .login__form-group label,
-.hero .container .hero-group .login__form-group input {
+.hero .container .hero-group .signup__form-group label,
+.hero .container .hero-group .signup__form-group input {
   font-family: "Poppins", sans-serif;
   color: #000;
   font-weight: 400;
 }
-.hero .container .hero-group .login__form-group label,
-.hero .container .hero-group .login__form-group input {
+.hero .container .hero-group .signup__form-group label,
+.hero .container .hero-group .signup__form-group input {
   font-size: 14px;
 }
 @media screen and (min-width: 360px) {
-  .hero .container .hero-group .login__form-group label,
-  .hero .container .hero-group .login__form-group input {
+  .hero .container .hero-group .signup__form-group label,
+  .hero .container .hero-group .signup__form-group input {
     font-size: calc(14px + 2 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .hero .container .hero-group .login__form-group label,
-  .hero .container .hero-group .login__form-group input {
+  .hero .container .hero-group .signup__form-group label,
+  .hero .container .hero-group .signup__form-group input {
     font-size: 16px;
   }
 }
-.hero .container .hero-group .login__form-group input {
+.hero .container .hero-group .signup__form-group input {
+  width: 100%;
   border-radius: 0.313rem;
   border: 0.063rem solid #b4b4cf;
   padding: 1.25rem 1.563rem;
   margin-top: 1.25rem;
 }
 @media screen and (max-width: 500px) {
-  .hero .container .hero-group .login__form-group input {
+  .hero .container .hero-group .signup__form-group input {
     padding: 0.938rem;
   }
 }
-.hero .container .hero-group .login__form-group a {
+.hero .container .hero-group .signup__form-group a {
   font-family: "Poppins", sans-serif;
   color: #0098ff;
   font-weight: 400;
   margin-top: 0.625rem;
   align-self: flex-end;
 }
-.hero .container .hero-group .login__form-group a {
+.hero .container .hero-group .signup__form-group a {
   font-size: 14px;
 }
 @media screen and (min-width: 360px) {
-  .hero .container .hero-group .login__form-group a {
+  .hero .container .hero-group .signup__form-group a {
     font-size: calc(14px + 0 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .hero .container .hero-group .login__form-group a {
+  .hero .container .hero-group .signup__form-group a {
     font-size: 14px;
   }
 }
-.hero .container .hero-group .login__form-button {
+.hero .container .hero-group .signup__form-button {
   margin-top: 3.125rem;
 }
 @media screen and (max-width: 500px) {
-  .hero .container .hero-group .login__form-button {
+  .hero .container .hero-group .signup__form-button {
     margin-top: 1.875rem;
   }
 }
-.hero .container .hero-group .login__form-button button {
+.hero .container .hero-group .signup__form-button button {
   font-family: "Poppins", sans-serif;
   color: #fff;
   font-weight: 500;
@@ -510,16 +470,16 @@ input {
   width: 100%;
   cursor: pointer;
 }
-.hero .container .hero-group .login__form-button button {
+.hero .container .hero-group .signup__form-button button {
   font-size: 16px;
 }
 @media screen and (min-width: 360px) {
-  .hero .container .hero-group .login__form-button button {
+  .hero .container .hero-group .signup__form-button button {
     font-size: calc(16px + 0 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .hero .container .hero-group .login__form-button button {
+  .hero .container .hero-group .signup__form-button button {
     font-size: 16px;
   }
 }

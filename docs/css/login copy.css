@@ -382,11 +382,6 @@ input {
 .hero .container .hero-group .login__social {
   margin-top: 3.125rem;
 }
-@media screen and (max-width: 500px) {
-  .hero .container .hero-group .login__social {
-    margin-top: 2.188rem;
-  }
-}
 .hero .container .hero-group .login__social-group {
   display: grid;
   grid-template-columns: 5fr 1fr 1fr;
@@ -434,11 +429,6 @@ input {
   flex-direction: column;
   margin-top: 2.5rem;
 }
-@media screen and (max-width: 500px) {
-  .hero .container .hero-group .login__form-group {
-    margin-top: 1.875rem;
-  }
-}
 .hero .container .hero-group .login__form-group label,
 .hero .container .hero-group .login__form-group input {
   font-family: "Poppins", sans-serif;
@@ -447,12 +437,12 @@ input {
 }
 .hero .container .hero-group .login__form-group label,
 .hero .container .hero-group .login__form-group input {
-  font-size: 14px;
+  font-size: 16px;
 }
 @media screen and (min-width: 360px) {
   .hero .container .hero-group .login__form-group label,
   .hero .container .hero-group .login__form-group input {
-    font-size: calc(14px + 2 * (100vw - 360px) / 1560);
+    font-size: calc(16px + 0 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -466,11 +456,6 @@ input {
   border: 0.063rem solid #b4b4cf;
   padding: 1.25rem 1.563rem;
   margin-top: 1.25rem;
-}
-@media screen and (max-width: 500px) {
-  .hero .container .hero-group .login__form-group input {
-    padding: 0.938rem;
-  }
 }
 .hero .container .hero-group .login__form-group a {
   font-family: "Poppins", sans-serif;
@@ -494,11 +479,6 @@ input {
 }
 .hero .container .hero-group .login__form-button {
   margin-top: 3.125rem;
-}
-@media screen and (max-width: 500px) {
-  .hero .container .hero-group .login__form-button {
-    margin-top: 1.875rem;
-  }
 }
 .hero .container .hero-group .login__form-button button {
   font-family: "Poppins", sans-serif;
