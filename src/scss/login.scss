@@ -1,9 +1,10 @@
-@use 'other/reset';
-@use 'other/fonts';
-@use 'other/variables';
-@use 'other/default';
+@use 'common/reset';
+@use 'common/fonts';
+@use 'common/default';
 
-@import 'other/all';
+@import 'common/fluid-type';
+@import 'common/variables';
+@import 'common/mixins';
 
 .hero {
   width: 100%;
@@ -19,14 +20,14 @@
     @media screen and (max-width: 900px) {
       @include center;
       flex-direction: column;
-      padding: 40px 0;
+      padding: 2.5rem 0;
     }
     .header {
       .header__logo {
         @include center-y;
         padding: 1rem 0;
         h1 {
-          @include fluid-type(28px, 28px);
+          @include fluid-type($text-2xl, $text-2xl);
           @include text(700, $white-100);
           margin-left: 0.5rem;
           text-transform: uppercase;
@@ -34,50 +35,50 @@
       }
     }
     .hero-group {
-      margin: 40px 0;
+      margin: 2.5rem 0;
       .hero-text {
         margin-top: 5rem;
         @media screen and (max-width: 900px) {
           display: none;
         }
         h1 {
-          @include fluid-type(36px, 36px);
+          @include fluid-type($text-4xl, $text-4xl);
           @include text(700, $white-100);
         }
         h2 {
-          @include fluid-type(24px, 24px);
+          @include fluid-type($text-2xl, $text-2xl);
           @include text(400, $white-100);
           margin: 1rem 0;
         }
         h3 {
-          @include fluid-type(14px, 14px);
+          @include fluid-type($text-sm, $text-sm);
           @include text(300, $white-100);
-          max-width: 300px;
+          max-width: 18.75rem;
         }
       }
-      .signin {
+      .login {
         background-color: $white-100;
         position: absolute;
         bottom: 0;
         right: 0;
-        padding: 44px;
-        border-radius: 30px;
+        padding: 2.75rem;
+        border-radius: 1.875rem;
         transform: translateY(50%);
-        box-shadow: 0 4px 35px 0 rgba($black-100, 0.08);
+        box-shadow: 0 0.25rem 2.188rem 0 rgba($black-100, 0.08);
         @media screen and (max-width: 900px) {
           position: static;
           display: inline-block;
           top: 0;
           left: 0;
           transform: none;
-          padding: 26px;
+          padding: 1.625rem;
         }
         &__header {
           @include center-x;
           justify-content: space-between;
           &-title {
             h2 {
-              @include fluid-type(16px, 21px);
+              @include fluid-type($text-base, $text-xl);
               @include text(400, $black-100);
               span {
                 @include text(700, $blue-100);
@@ -85,8 +86,9 @@
               }
             }
             h1 {
-              @include fluid-type(36px, 48px);
-              @include text(500, $black-100);
+              @include fluid-type($text-4xl, $text-5xl);
+              @include text(700, $black-100);
+              margin-top: 1rem;
             }
           }
           &-signup {
@@ -95,7 +97,7 @@
               margin-left: 1rem;
             }
             h3 {
-              @include fluid-type(12px, 14px);
+              @include fluid-type($text-xs, $text-sm);
               @include text(400, $gray-100);
               a {
                 color: $blue-100;
@@ -104,7 +106,7 @@
           }
         }
         &__social {
-          margin-top: 50px;
+          margin-top: 3.125rem;
           &-group {
             display: grid;
             grid-template-columns: 5fr 1fr 1fr;
@@ -116,11 +118,11 @@
             &__item {
               @include center;
               background-color: $white-200;
-              border-radius: 10px;
+              border-radius: 0.625rem;
               padding: 0.5rem 0;
               cursor: pointer;
               h3 {
-                @include fluid-type(13px, 16px);
+                @include fluid-type($text-xs, $text-base);
                 @include text(400, $blue-100);
                 margin-left: 0.5rem;
               }
@@ -128,37 +130,37 @@
           }
         }
         &__form {
-          margin-top: 50px;
+          margin-top: 3.125rem;
           &-group {
             display: flex;
             flex-direction: column;
-            margin-top: 40px;
+            margin-top: 2.5rem;
             label,
             input {
-              @include fluid-type(16px, 16px);
+              @include fluid-type($text-base, $text-base);
               @include text(400, $black-100);
             }
             input {
-              border-radius: 5px;
-              border: 1px solid $gray-100;
-              padding: 20px 25px;
-              margin-top: 20px;
+              border-radius: 0.313rem;
+              border: 0.063rem solid $gray-100;
+              padding: 1.25rem 1.563rem;
+              margin-top: 1.25rem;
             }
             a {
-              @include fluid-type(14px, 14px);
+              @include fluid-type($text-sm, $text-sm);
               @include text(400, $blue-100);
-              margin-top: 10px;
+              margin-top: 0.625rem;
               align-self: flex-end;
             }
           }
           &-button {
-            margin-top: 50px;
+            margin-top: 3.125rem;
             button {
-              @include fluid-type(16px, 16px);
+              @include fluid-type($text-base, $text-base);
               @include text(500, $white-100);
               background-color: $blue-100;
-              border-radius: 5px;
-              padding: 20px 0;
+              border-radius: 0.313rem;
+              padding: 1.25rem 0;
               width: 100%;
               cursor: pointer;
             }
@@ -172,7 +174,7 @@
         display: block;
       }
       p {
-        @include fluid-type(18px, 18px);
+        @include fluid-type($text-lg, $text-lg);
         @include text(400, $white-100);
         text-align: center;
       }
@@ -183,38 +185,38 @@
 .accounts {
   width: 100%;
   height: 50vh;
-  background-color: yellow;
+  background-color: $white-100;
   @media screen and (max-width: 900px) {
     display: none;
   }
   .container {
-    padding: 50px 0;
+    padding: 3.125rem 0;
     .accounts__header {
       h1 {
-        @include fluid-type(16px, 16px);
+        @include fluid-type($text-base, $text-base);
         @include text(400, $black-100);
       }
     }
     .profiles {
-      margin-top: 30px;
+      margin-top: 1.875rem;
       &__row {
         display: flex;
-        column-gap: 20px;
+        column-gap: 1.25rem;
         &-item {
-          border-radius: 10px;
+          border-radius: 0.625rem;
           background-color: $white-200;
-          padding: 10px;
+          padding: 0.625rem;
           display: inline-block;
           cursor: pointer;
-          flex-basis: 150px;
+          flex-basis: 9.375rem;
           &.template {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             .profiles__row-item__person {
               img {
-                border: 3px solid $gray-100;
-                padding: 17px;
+                border: 0.188rem solid $gray-100;
+                padding: 1.063rem;
               }
             }
           }
@@ -227,13 +229,13 @@
             display: flex;
             justify-content: flex-end;
             img {
-              width: 21px;
+              width: 1.313rem;
             }
           }
           &__person {
-            margin: 10px 0;
+            margin: 0.625rem 0;
             img {
-              width: 76px;
+              width: 4.75rem;
               aspect-ratio: 1 / 1;
               border-radius: 50%;
             }
@@ -241,13 +243,13 @@
           &__footer {
             text-align: center;
             h1 {
-              @include fluid-type(16px, 16px);
+              @include fluid-type($text-base, $text-base);
               @include text(500, $black-100);
             }
             h3 {
-              @include fluid-type(13px, 13px);
+              @include fluid-type($text-sm, $text-sm);
               @include text(300, $gray-100);
-              margin-top: 5px;
+              margin-top: 0.313rem;
             }
           }
         }

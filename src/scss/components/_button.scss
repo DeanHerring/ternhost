@@ -1,7 +1,8 @@
-@import 'other/all';
+@import 'common/fluid-type';
 
 .btn {
-  @include text-lg(700, $white-100);
+  @include fluid-type(18px, 18px);
+  @include text(700, $white-100);
   border-radius: 0.313rem;
   padding: 0.625rem 2.188rem;
   cursor: pointer;

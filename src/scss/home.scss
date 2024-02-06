@@ -1,7 +1,7 @@
-@use 'other/reset';
-@use 'other/fonts';
-@use 'other/variables';
-@use 'other/default';
+@use 'common/reset';
+@use 'common/fonts';
+@use 'common/variables';
+@use 'common/default';
 
 // Sections
 @use 'sections/home/promo';
