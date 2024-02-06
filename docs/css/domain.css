@@ -193,3 +193,13 @@ input {
 .btn-secondary {
   background-color: #0098ff;
 }
+.btn-white {
+  background-color: #fff;
+  border: 2px solid #0098ff;
+  color: #0098ff;
+  transition: all 0.2s;
+}
+.btn-white:hover {
+  background-color: #0098ff;
+  color: #fff;
+}

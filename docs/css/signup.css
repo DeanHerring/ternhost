@@ -292,6 +292,7 @@ input {
   transform: translateY(50%);
   box-shadow: 0 0.25rem 2.188rem 0 rgba(0, 0, 0, 0.08);
   max-width: 500px;
+  width: 100%;
 }
 @media screen and (max-width: 900px) {
   .hero .container .hero-group .signup {
