@@ -1,11 +1,10 @@
-@use 'common/reset';
-@use 'common/fonts';
-@use 'common/default';
-@use 'components/button';
-@use 'tern/section';
-
-@import 'common/fluid-type';
-@import 'common/all';
+@import '../common/reset';
+@import '../common/fonts';
+@import '../common/default';
+@import '../components/button';
+@import '../common/fluid-type';
+@import '../common/all';
+@import '../tern/section';
 
 .hero {
   width: 100%;

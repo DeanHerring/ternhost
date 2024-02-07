@@ -1,4 +1,4 @@
-@import 'common/fluid-type';
+@import '../common/fluid-type';
 
 .btn {
   @include fluid-type(18px, 18px);

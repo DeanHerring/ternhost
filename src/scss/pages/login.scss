@@ -1,10 +1,9 @@
-@use 'common/reset';
-@use 'common/fonts';
-@use 'common/default';
-
-@import 'common/fluid-type';
-@import 'common/variables';
-@import 'common/mixins';
+@import '../common/reset';
+@import '../common/fonts';
+@import '../common/default';
+@import '../common/fluid-type';
+@import '../common/variables';
+@import '../common/mixins';
 
 .hero {
   width: 100%;

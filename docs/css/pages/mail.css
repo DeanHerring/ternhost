@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 html,
 body,
 div,
@@ -163,7 +163,7 @@ input {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .btn {
@@ -204,14 +204,59 @@ input {
   color: #fff;
 }
 
-.tern-section {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 6.25rem 0;
+.mail {
+  width: 500px;
+  max-width: 90%;
+  background-color: #fff;
+  border-radius: 10px;
 }
-@media screen and (max-width: 700px) {
-  .tern-section {
-    padding: 3.5rem 0;
-  }
+.mail__header {
+  position: relative;
+}
+.mail__header-title {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  margin-top: 30px;
+}
+.mail__header-title h1 {
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-weight: 700;
+}
+.mail__header-title h3 {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 15px;
+}
+.mail__header img {
+  width: 100%;
+}
+.mail__text {
+  padding: 0 100px 50px 100px;
+}
+.mail__text p {
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22.5px;
+}
+.mail__text p span {
+  font-family: "Poppins", sans-serif;
+  color: #0098ff;
+  font-weight: 700;
+}
+.mail__footer {
+  padding: 0 100px 100px 100px;
+}
+.mail__footer button {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  width: 100%;
 }

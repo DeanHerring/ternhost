@@ -1,17 +1,9 @@
-@use 'common/reset';
-@use 'common/fonts';
-@use 'common/default';
-@use 'components/button';
-
-@import 'common/fluid-type';
-@import 'common/all';
-
-// .container {
-//   @include center;
-//   padding: 50px;
-//   min-height: 100vh;
-//   background-color: $white-300;
-// }
+@import '../common/reset';
+@import '../common/fonts';
+@import '../common/default';
+@import '../components/button';
+@import '../common/fluid-type';
+@import '../common/all';
 
 .mail {
   width: 500px;
