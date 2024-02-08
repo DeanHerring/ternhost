@@ -192,6 +192,13 @@
               }
             }
           }
+          &.add-new-product {
+            text-align: center;
+            h1 {
+              @include fluid-type($text-xl, $text-2xl);
+              @include text(600, $blue-200);
+            }
+          }
         }
       }
       .orders {

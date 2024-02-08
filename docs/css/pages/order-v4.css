@@ -520,6 +520,27 @@ input {
   left: calc(100% - 0.188rem);
   transform: translateX(-100%);
 }
+.hero .container .order-wrapper .basket .box.add-new-product {
+  text-align: center;
+}
+.hero .container .order-wrapper .basket .box.add-new-product h1 {
+  font-family: "Poppins", sans-serif;
+  color: #03045e;
+  font-weight: 600;
+}
+.hero .container .order-wrapper .basket .box.add-new-product h1 {
+  font-size: 20px;
+}
+@media screen and (min-width: 360px) {
+  .hero .container .order-wrapper .basket .box.add-new-product h1 {
+    font-size: calc(20px + 4 * (100vw - 360px) / 1560);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .hero .container .order-wrapper .basket .box.add-new-product h1 {
+    font-size: 24px;
+  }
+}
 .hero .container .order-wrapper .orders .box {
   padding: 2rem 0;
   border-radius: 1.875rem;
