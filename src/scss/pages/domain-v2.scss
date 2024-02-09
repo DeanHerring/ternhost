@@ -74,7 +74,7 @@
 }
 
 .hero {
-  margin-top: calc(7.188rem + 7.5rem);
+  padding-top: calc(7.188rem + 7.5rem);
   .container {
     .search-box {
       .search {
@@ -96,7 +96,7 @@
             @include text(400, $gray-200);
             padding: 1rem;
             background-color: $white-200;
-            border-radius: 0.25rem;
+            border-radius: 0.25rem 0 0 0.25rem;
             width: 100%;
           }
         }

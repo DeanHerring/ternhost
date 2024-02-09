@@ -330,7 +330,7 @@ input {
 }
 
 .hero {
-  margin-top: 14.688rem;
+  padding-top: 14.688rem;
 }
 @media screen and (max-width: 600px) {
   .hero .container .search-box .search {
@@ -370,7 +370,7 @@ input {
   font-weight: 400;
   padding: 1rem;
   background-color: #f6f6f6;
-  border-radius: 0.25rem;
+  border-radius: 0.25rem 0 0 0.25rem;
   width: 100%;
 }
 .hero .container .search-box .search__input input {
