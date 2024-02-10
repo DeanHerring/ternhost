@@ -1,17 +1,32 @@
-@import '../common/all';
-@import '../tern/all';
+@import '../common/variables';
+@import '../common/mixins';
 
-// Top
 .top {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 666;
+  .promo {
+    background-color: $blue-100;
+    .container {
+      @include center;
+      h1 {
+        @include fluid-type($text-xs, $text-lg, 700, $blue-200);
+        color: $white-100;
+        padding: 0.5rem;
+        text-transform: uppercase;
+      }
+      .icon {
+        margin-left: 0.25rem;
+        color: $white-100;
+      }
+    }
+  }
   .header {
     backdrop-filter: blur(2.5rem);
     .container {
       @include center-y-between;
-      justify-content: space-between;
       padding: 1rem 0;
       .header__logo {
         @include center-y;
@@ -47,46 +62,4 @@
       }
     }
   }
-}
-
-.hero {
-  padding: 7.5rem 0;
-  .container {
-    .hero-body {
-      @include center-y-between;
-      @media screen and (max-width: 900px) {
-        flex-direction: column;
-      }
-      &__text {
-        @media screen and (max-width: 900px) {
-          order: 1;
-          text-align: center;
-        }
-        h1 {
-          @include fluid-type($text-4xl, $text-5xl, 700, $blue-200);
-          span {
-            font-weight: 500;
-          }
-        }
-        button {
-          margin-top: 3rem;
-        }
-      }
-      &__image {
-        @media screen and (max-width: 900px) {
-          order: 0;
-        }
-        img {
-          width: 100%;
-        }
-      }
-    }
-  }
-}
-
-.footer,
-.terms-wrapper,
-.hero,
-.top {
-  background-color: $white-300;
 }

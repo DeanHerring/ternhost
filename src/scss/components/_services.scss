@@ -1,0 +1,49 @@
+@import '../common/variables';
+@import '../common/mixins';
+
+.services {
+  padding: 9.375rem 0;
+  .container {
+    .services-header {
+      text-align: center;
+      h1 {
+        @include fluid-type($text-4xl, $text-4xl, 700, $blue-200);
+      }
+    }
+    .services-body {
+      margin-top: 7.5rem;
+      .services-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 5rem;
+        @media screen and (max-width: 900px) {
+          grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width: 500px) {
+          grid-template-columns: 1fr;
+        }
+        &__item {
+          @include center-col;
+          &-header {
+            @include center;
+            width: 6.25rem;
+            aspect-ratio: 1 / 1;
+            border-radius: 0.625rem;
+            background-color: $white-200;
+          }
+          &-text {
+            margin-top: 2rem;
+            text-align: center;
+            h1 {
+              @include fluid-type($text-xl, $text-xl, 700, $blue-200);
+            }
+            p {
+              @include fluid-type($text-base, $text-base, $color: $gray-200);
+              margin-top: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

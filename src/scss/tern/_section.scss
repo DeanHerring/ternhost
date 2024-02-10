@@ -1,4 +1,5 @@
-@import '../common/all';
+@import '../common/variables';
+@import '../common/mixins';
 
 .tern-section {
   @include center-x;

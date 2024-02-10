@@ -1,8 +1,9 @@
+@import '../common/variables';
+@import '../common/mixins';
 @import '../common/fluid-type';
 
 .btn {
-  @include fluid-type(18px, 18px);
-  @include text(700, $white-100);
+  @include fluid-type($text-lg, $text-lg, 700, $white-100);
   border-radius: 0.313rem;
   padding: 0.625rem 2.188rem;
   cursor: pointer;
@@ -14,7 +15,7 @@
   }
   &-white {
     background-color: $white-100;
-    border: 2px solid $blue-100;
+    border: 0.125rem solid $blue-100;
     color: $blue-100;
     transition: all 0.2s;
     &:hover {

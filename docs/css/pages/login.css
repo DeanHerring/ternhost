@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 html,
 body,
 div,
@@ -190,28 +190,28 @@ input {
     padding: 2.5rem 0;
   }
 }
-.hero .container .header .header__logo {
+.hero .container .header__logo {
   display: flex;
   align-items: center;
   padding: 1rem 0;
 }
-.hero .container .header .header__logo h1 {
+.hero .container .header__logo h1 {
   font-family: "Poppins", sans-serif;
   color: #fff;
   font-weight: 700;
   margin-left: 0.5rem;
   text-transform: uppercase;
 }
-.hero .container .header .header__logo h1 {
+.hero .container .header__logo h1 {
   font-size: 24px;
 }
 @media screen and (min-width: 360px) {
-  .hero .container .header .header__logo h1 {
+  .hero .container .header__logo h1 {
     font-size: calc(24px + 0 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .hero .container .header .header__logo h1 {
+  .hero .container .header__logo h1 {
     font-size: 24px;
   }
 }
@@ -291,7 +291,7 @@ input {
   border-radius: 1.875rem;
   transform: translateY(50%);
   box-shadow: 0 0.25rem 2.188rem 0 rgba(0, 0, 0, 0.08);
-  max-width: 500px;
+  max-width: 31.25rem;
   width: 100%;
 }
 @media screen and (max-width: 900px) {
@@ -332,6 +332,19 @@ input {
   color: #0098ff;
   font-weight: 700;
   text-transform: uppercase;
+}
+.hero .container .hero-group .login__header-title h2 span {
+  font-size: 16px;
+}
+@media screen and (min-width: 360px) {
+  .hero .container .hero-group .login__header-title h2 span {
+    font-size: calc(16px + 4 * (100vw - 360px) / 1560);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .hero .container .hero-group .login__header-title h2 span {
+    font-size: 20px;
+  }
 }
 .hero .container .hero-group .login__header-title h1 {
   font-family: "Poppins", sans-serif;

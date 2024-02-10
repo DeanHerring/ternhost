@@ -1,0 +1,45 @@
+@import '../common/variables';
+@import '../common/mixins';
+
+.faq {
+  padding: 9.375rem 0;
+  .container {
+    .faq-header {
+      text-align: center;
+      h1 {
+        @include fluid-type($text-4xl, $text-4xl, 700, $blue-200);
+      }
+    }
+    .faq-body {
+      margin-top: 4.375rem;
+      .questions {
+        &__item {
+          margin-top: 1.5rem;
+          padding: 1.5rem;
+          border: 0.063rem solid $gray-200;
+          box-shadow: 0 0.25rem 1.25rem 0 rgba($green-100, 0.3);
+          &-header {
+            @include center-y-between;
+            h1 {
+              @include fluid-type($text-lg, $text-3xl, 600, $blue-200);
+            }
+            .icon {
+              font-size: 1.5rem;
+              color: $blue-200;
+            }
+          }
+          &-body {
+            margin-top: 2rem;
+            display: none;
+            &.show {
+              display: block;
+            }
+            p {
+              @include fluid-type($text-base, $text-lg, 500, rgba($blue-200, 0.5));
+            }
+          }
+        }
+      }
+    }
+  }
+}

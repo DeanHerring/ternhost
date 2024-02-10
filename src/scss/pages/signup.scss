@@ -1,7 +1,3 @@
-@import '../common/reset';
-@import '../common/fonts';
-@import '../common/default';
-@import '../common/fluid-type';
 @import '../common/all';
 
 .hero {
@@ -16,17 +12,15 @@
     height: 100%;
     position: relative;
     @media screen and (max-width: 900px) {
-      @include center;
-      flex-direction: column;
+      @include center-col;
       padding: 2.5rem 0;
     }
     .header {
-      .header__logo {
+      &__logo {
         @include center-y;
         padding: 1rem 0;
         h1 {
-          @include fluid-type($text-2xl, $text-2xl);
-          @include text(700, $white-100);
+          @include fluid-type($text-2xl, $text-2xl, 700, $white-100);
           margin-left: 0.5rem;
           text-transform: uppercase;
         }
@@ -40,17 +34,14 @@
           display: none;
         }
         h1 {
-          @include fluid-type($text-4xl, $text-4xl);
-          @include text(700, $white-100);
+          @include fluid-type($text-4xl, $text-4xl, 700, $white-100);
         }
         h2 {
-          @include fluid-type($text-2xl, $text-2xl);
-          @include text(400, $white-100);
+          @include fluid-type($text-2xl, $text-2xl, $color: $blue-100);
           margin: 1rem 0;
         }
         h3 {
-          @include fluid-type($text-sm, $text-sm);
-          @include text(300, $white-100);
+          @include fluid-type($text-sm, $text-sm, 300, $white-100);
           max-width: 18.75rem;
         }
       }
@@ -63,7 +54,7 @@
         border-radius: 1.875rem;
         transform: translateY(50%);
         box-shadow: 0 0.25rem 2.188rem 0 rgba($black-100, 0.08);
-        max-width: 500px;
+        max-width: 31.25rem;
         width: 100%;
         @media screen and (max-width: 900px) {
           position: static;
@@ -74,20 +65,18 @@
           padding: 1.625rem;
         }
         &__header {
-          @include center-x;
+          @include center-x-between;
           justify-content: space-between;
           &-title {
             h2 {
               @include fluid-type($text-base, $text-xl);
-              @include text(400, $black-100);
               span {
-                @include text(700, $blue-100);
+                @include fluid-type($text-base, $text-xl, 700, $blue-100);
                 text-transform: uppercase;
               }
             }
             h1 {
-              @include fluid-type($text-4xl, $text-5xl);
-              @include text(700, $black-100);
+              @include fluid-type($text-4xl, $text-5xl, 700);
               margin-top: 1rem;
             }
           }
@@ -97,8 +86,7 @@
               margin-left: 1rem;
             }
             h3 {
-              @include fluid-type($text-xs, $text-sm);
-              @include text(400, $gray-100);
+              @include fluid-type($text-xs, $text-sm, $color: $gray-100);
               a {
                 color: $blue-100;
               }
@@ -122,7 +110,6 @@
             label,
             input {
               @include fluid-type($text-sm, $text-base);
-              @include text(400, $black-100);
             }
             input {
               width: 100%;
@@ -135,8 +122,7 @@
               }
             }
             a {
-              @include fluid-type($text-sm, $text-sm);
-              @include text(400, $blue-100);
+              @include fluid-type($text-sm, $text-sm, $color: $blue-100);
               margin-top: 0.625rem;
               align-self: flex-end;
             }
@@ -147,8 +133,7 @@
               margin-top: 1.875rem;
             }
             button {
-              @include fluid-type($text-base, $text-base);
-              @include text(500, $white-100);
+              @include fluid-type($text-base, $text-base, 500, $white-100);
               background-color: $blue-100;
               border-radius: 0.313rem;
               padding: 1.25rem 0;
@@ -165,8 +150,7 @@
         display: block;
       }
       p {
-        @include fluid-type($text-lg, $text-lg);
-        @include text(400, $white-100);
+        @include fluid-type($text-lg, $text-lg, $color: $white-100);
         text-align: center;
       }
     }
@@ -185,7 +169,6 @@
     .accounts__header {
       h1 {
         @include fluid-type($text-base, $text-base);
-        @include text(400, $black-100);
       }
     }
     .profiles {
@@ -213,8 +196,7 @@
           }
           &__person,
           &__footer {
-            @include center;
-            flex-direction: column;
+            @include center-col;
           }
           &__header {
             display: flex;
@@ -234,12 +216,10 @@
           &__footer {
             text-align: center;
             h1 {
-              @include fluid-type($text-base, $text-base);
-              @include text(500, $black-100);
+              @include fluid-type($text-base, $text-base, 500);
             }
             h3 {
-              @include fluid-type($text-sm, $text-sm);
-              @include text(300, $gray-100);
+              @include fluid-type($text-sm, $text-sm, 300, $gray-100);
               margin-top: 0.313rem;
             }
           }

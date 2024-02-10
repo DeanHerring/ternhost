@@ -1,0 +1,37 @@
+@import '../common/variables';
+@import '../common/mixins';
+
+.terms-wrapper {
+  @include center-x;
+  padding: 1.5rem 0;
+  .container {
+    .terms {
+      @include center-y-between;
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+      }
+      h1 {
+        @include fluid-type($text-sm, $text-sm, $color: $blue-200);
+        @media screen and (max-width: 600px) {
+          order: 1;
+          margin-top: 1rem;
+        }
+      }
+      &__group {
+        @include center-x;
+        @media screen and (max-width: 600px) {
+          order: 0;
+        }
+        &-item {
+          &:last-child {
+            border-left: 0.063rem solid $blue-200;
+          }
+          &__link {
+            @include fluid-type($text-sm, $text-sm, $color: $blue-200);
+            margin: 0 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

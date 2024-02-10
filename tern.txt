@@ -1,0 +1,7 @@
+Duplicate Sections:
+
+- Services
+- FAQ
+- Footer
+- Terms of Use
+- Pricing???
