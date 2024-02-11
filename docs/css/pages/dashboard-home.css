@@ -166,6 +166,11 @@ input {
   display: none !important;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 .btn {
   font-family: "Poppins", sans-serif;
   color: #fff;
@@ -202,6 +207,12 @@ input {
 .btn-white:hover {
   background-color: #0098ff;
   color: #fff;
+}
+.btn-green {
+  background-color: #00c084;
+}
+.btn-red {
+  background-color: #ff7171;
 }
 
 .dropdown {
@@ -283,6 +294,178 @@ input {
   .dropdown__menu-group__item a {
     font-size: 16px;
   }
+}
+
+.setting {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(3, 4, 94, 0.3);
+  z-index: 666;
+  overflow-y: auto;
+  display: none;
+}
+.setting.show {
+  display: block;
+}
+.setting__modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 1.875rem;
+  padding: 1.5rem;
+  max-height: 95vh;
+  overflow-y: auto;
+}
+.setting__modal .setting__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.setting__modal .setting__header h1 {
+  font-family: "Poppins", sans-serif;
+  color: #03045e;
+  font-weight: 600;
+}
+.setting__modal .setting__header h1 {
+  font-size: 30px;
+}
+@media screen and (min-width: 360px) {
+  .setting__modal .setting__header h1 {
+    font-size: calc(30px + 0 * (100vw - 360px) / 1560);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .setting__modal .setting__header h1 {
+    font-size: 30px;
+  }
+}
+.setting__modal .setting__header .icon {
+  font-size: 36px;
+  color: #03045e;
+  cursor: pointer;
+}
+.setting__modal .setting__body {
+  margin: 3rem 0;
+}
+.setting__modal .setting__body-security .security {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+@media screen and (max-width: 900px) {
+  .setting__modal .setting__body-security .security {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 500px) {
+  .setting__modal .setting__body-security .security {
+    grid-template-columns: 1fr;
+  }
+}
+.setting__modal .setting__body-security .security__item h1 {
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  font-weight: 600;
+  text-wrap: nowrap;
+}
+.setting__modal .setting__body-security .security__item h1 {
+  font-size: 14px;
+}
+@media screen and (min-width: 360px) {
+  .setting__modal .setting__body-security .security__item h1 {
+    font-size: calc(14px + 6 * (100vw - 360px) / 1560);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .setting__modal .setting__body-security .security__item h1 {
+    font-size: 20px;
+  }
+}
+.setting__modal .setting__body-security .security__item button {
+  margin-top: 1rem;
+  width: 100%;
+}
+.setting__modal .setting__body-form {
+  margin-top: 3rem;
+}
+.setting__modal .setting__body-form .box {
+  margin-top: 1rem;
+}
+.setting__modal .setting__body-form .box.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+.setting__modal .setting__body-form .box.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+@media screen and (max-width: 900px) {
+  .setting__modal .setting__body-form .box.grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  .setting__modal .setting__body-form .box.grid-2, .setting__modal .setting__body-form .box.grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+.setting__modal .setting__body-form .box .form-part {
+  display: flex;
+  flex-direction: column;
+}
+.setting__modal .setting__body-form .box .form-part label {
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  font-weight: 600;
+}
+.setting__modal .setting__body-form .box .form-part label {
+  font-size: 20px;
+}
+@media screen and (min-width: 360px) {
+  .setting__modal .setting__body-form .box .form-part label {
+    font-size: calc(20px + 0 * (100vw - 360px) / 1560);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .setting__modal .setting__body-form .box .form-part label {
+    font-size: 20px;
+  }
+}
+.setting__modal .setting__body-form .box .form-part input {
+  font-family: "Poppins", sans-serif;
+  color: #7f80ad;
+  font-weight: 400;
+  padding: 1.25rem;
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  border: 0.063rem solid #7f80ad;
+}
+.setting__modal .setting__body-form .box .form-part input {
+  font-size: 14px;
+}
+@media screen and (min-width: 360px) {
+  .setting__modal .setting__body-form .box .form-part input {
+    font-size: calc(14px + 0 * (100vw - 360px) / 1560);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .setting__modal .setting__body-form .box .form-part input {
+    font-size: 14px;
+  }
+}
+.setting__modal .setting__footer {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 1rem;
 }
 
 .dashboard {
@@ -489,7 +672,7 @@ input {
   }
 }
 .dashboard__body-header .container .header__body-user {
-  width: 50px;
+  width: 3rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
 }
@@ -580,7 +763,7 @@ input {
 }
 .dashboard__body .container .box-container .account__header-image img {
   width: 100%;
-  width: 128px;
+  width: 8rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
 }
@@ -727,7 +910,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 38px;
+  width: 3rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: #fff;
@@ -758,332 +941,332 @@ input {
     font-size: 48px;
   }
 }
-.dashboard__body .container .box-container .transactions__header h1 {
+.dashboard__body .container .transactions__header h1 {
   font-family: "Poppins", sans-serif;
   color: #232323;
   font-weight: 600;
 }
-.dashboard__body .container .box-container .transactions__header h1 {
+.dashboard__body .container .transactions__header h1 {
   font-size: 20px;
 }
 @media screen and (min-width: 360px) {
-  .dashboard__body .container .box-container .transactions__header h1 {
+  .dashboard__body .container .transactions__header h1 {
     font-size: calc(20px + 4 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .dashboard__body .container .box-container .transactions__header h1 {
+  .dashboard__body .container .transactions__header h1 {
     font-size: 24px;
   }
 }
-.dashboard__body .container .box-container .transactions__body {
+.dashboard__body .container .transactions__body {
   margin-top: 2.5rem;
 }
-.dashboard__body .container .box-container .transactions__body-group__item {
+.dashboard__body .container .transactions__body-group__item {
   margin-top: 1.5rem;
 }
-.dashboard__body .container .box-container .transactions__body-group__item .transaction {
+.dashboard__body .container .transactions__body-group__item .transaction {
   display: flex;
   align-items: center;
 }
-.dashboard__body .container .box-container .transactions__body-group__item .transaction__icon {
+.dashboard__body .container .transactions__body-group__item .transaction__icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 54px;
+  width: 3rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: rgba(0, 152, 255, 0.1);
 }
-.dashboard__body .container .box-container .transactions__body-group__item .transaction__icon .icon {
+.dashboard__body .container .transactions__body-group__item .transaction__icon .icon {
   font-size: 24px;
   color: #0098ff;
 }
-.dashboard__body .container .box-container .transactions__body-group__item .transaction__data {
+.dashboard__body .container .transactions__body-group__item .transaction__data {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-left: 1rem;
 }
-.dashboard__body .container .box-container .transactions__body-group__item .transaction__data-category h1 {
+.dashboard__body .container .transactions__body-group__item .transaction__data-category h1 {
   font-family: "Poppins", sans-serif;
   color: #232323;
   font-weight: 600;
 }
-.dashboard__body .container .box-container .transactions__body-group__item .transaction__data-category h1 {
+.dashboard__body .container .transactions__body-group__item .transaction__data-category h1 {
   font-size: 16px;
 }
 @media screen and (min-width: 360px) {
-  .dashboard__body .container .box-container .transactions__body-group__item .transaction__data-category h1 {
+  .dashboard__body .container .transactions__body-group__item .transaction__data-category h1 {
     font-size: calc(16px + 2 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .dashboard__body .container .box-container .transactions__body-group__item .transaction__data-category h1 {
+  .dashboard__body .container .transactions__body-group__item .transaction__data-category h1 {
     font-size: 18px;
   }
 }
-.dashboard__body .container .box-container .transactions__body-group__item .transaction__data-category h3 {
+.dashboard__body .container .transactions__body-group__item .transaction__data-category h3 {
   font-family: "Poppins", sans-serif;
   color: #7f80ad;
   font-weight: 500;
 }
-.dashboard__body .container .box-container .transactions__body-group__item .transaction__data-category h3 {
+.dashboard__body .container .transactions__body-group__item .transaction__data-category h3 {
   font-size: 14px;
 }
 @media screen and (min-width: 360px) {
-  .dashboard__body .container .box-container .transactions__body-group__item .transaction__data-category h3 {
+  .dashboard__body .container .transactions__body-group__item .transaction__data-category h3 {
     font-size: calc(14px + 0 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .dashboard__body .container .box-container .transactions__body-group__item .transaction__data-category h3 {
+  .dashboard__body .container .transactions__body-group__item .transaction__data-category h3 {
     font-size: 14px;
   }
 }
-.dashboard__body .container .box-container .transactions__body-group__item .transaction__data-amount h1 {
+.dashboard__body .container .transactions__body-group__item .transaction__data-amount h1 {
   font-family: "Poppins", sans-serif;
   color: #232323;
   font-weight: 600;
 }
-.dashboard__body .container .box-container .transactions__body-group__item .transaction__data-amount h1 {
+.dashboard__body .container .transactions__body-group__item .transaction__data-amount h1 {
   font-size: 16px;
 }
 @media screen and (min-width: 360px) {
-  .dashboard__body .container .box-container .transactions__body-group__item .transaction__data-amount h1 {
+  .dashboard__body .container .transactions__body-group__item .transaction__data-amount h1 {
     font-size: calc(16px + 2 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .dashboard__body .container .box-container .transactions__body-group__item .transaction__data-amount h1 {
+  .dashboard__body .container .transactions__body-group__item .transaction__data-amount h1 {
     font-size: 18px;
   }
 }
-.dashboard__body .container .box-container .transactions__body-group__item .transaction__data-amount h1.green {
+.dashboard__body .container .transactions__body-group__item .transaction__data-amount h1.green {
   color: #00c084;
 }
-.dashboard__body .container .box-container .transactions__body-group__item .transaction__data-amount h1.red {
+.dashboard__body .container .transactions__body-group__item .transaction__data-amount h1.red {
   color: #ff7171;
 }
-.dashboard__body .container .box-container .transactions__body-group__item .transaction__data-amount h1.yellow {
+.dashboard__body .container .transactions__body-group__item .transaction__data-amount h1.yellow {
   color: #bfc765;
 }
-.dashboard__body .container .box-container .security {
+.dashboard__body .container .security {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.dashboard__body .container .box-container .security__header .icon {
+.dashboard__body .container .security__header .icon {
   font-size: 48px;
   color: #0098ff;
   font-weight: 700;
 }
-.dashboard__body .container .box-container .security__body {
+.dashboard__body .container .security__body {
   margin: 1rem 0;
 }
-.dashboard__body .container .box-container .security__body h1 {
+.dashboard__body .container .security__body h1 {
   font-family: "Poppins", sans-serif;
   color: #03045e;
   font-weight: 700;
 }
-.dashboard__body .container .box-container .security__body h1 {
+.dashboard__body .container .security__body h1 {
   font-size: 24px;
 }
 @media screen and (min-width: 360px) {
-  .dashboard__body .container .box-container .security__body h1 {
+  .dashboard__body .container .security__body h1 {
     font-size: calc(24px + 0 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .dashboard__body .container .box-container .security__body h1 {
+  .dashboard__body .container .security__body h1 {
     font-size: 24px;
   }
 }
-.dashboard__body .container .box-container .security__body h3 {
+.dashboard__body .container .security__body h3 {
   font-family: "Poppins", sans-serif;
   color: #7f80ad;
   font-weight: 500;
   margin-top: 1rem;
 }
-.dashboard__body .container .box-container .security__body h3 {
+.dashboard__body .container .security__body h3 {
   font-size: 14px;
 }
 @media screen and (min-width: 360px) {
-  .dashboard__body .container .box-container .security__body h3 {
+  .dashboard__body .container .security__body h3 {
     font-size: calc(14px + 0 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .dashboard__body .container .box-container .security__body h3 {
+  .dashboard__body .container .security__body h3 {
     font-size: 14px;
   }
 }
-.dashboard__body .container .box-container .security__footer button {
+.dashboard__body .container .security__footer button {
   width: 100%;
 }
-.dashboard__body .container .box-container .domain,
-.dashboard__body .container .box-container .hosting,
-.dashboard__body .container .box-container .builder,
-.dashboard__body .container .box-container .services {
+.dashboard__body .container .domain,
+.dashboard__body .container .hosting,
+.dashboard__body .container .builder,
+.dashboard__body .container .services {
   display: flex;
   align-items: center;
 }
-.dashboard__body .container .box-container .domain__body,
-.dashboard__body .container .box-container .hosting__body,
-.dashboard__body .container .box-container .builder__body,
-.dashboard__body .container .box-container .services__body {
+.dashboard__body .container .domain__body,
+.dashboard__body .container .hosting__body,
+.dashboard__body .container .builder__body,
+.dashboard__body .container .services__body {
   display: flex;
   align-items: center;
 }
-.dashboard__body .container .box-container .domain__body-icon,
-.dashboard__body .container .box-container .hosting__body-icon,
-.dashboard__body .container .box-container .builder__body-icon,
-.dashboard__body .container .box-container .services__body-icon {
+.dashboard__body .container .domain__body-icon,
+.dashboard__body .container .hosting__body-icon,
+.dashboard__body .container .builder__body-icon,
+.dashboard__body .container .services__body-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45px;
+  width: 3rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: rgba(0, 152, 255, 0.1);
   cursor: pointer;
 }
-.dashboard__body .container .box-container .domain__body-icon .icon,
-.dashboard__body .container .box-container .hosting__body-icon .icon,
-.dashboard__body .container .box-container .builder__body-icon .icon,
-.dashboard__body .container .box-container .services__body-icon .icon {
+.dashboard__body .container .domain__body-icon .icon,
+.dashboard__body .container .hosting__body-icon .icon,
+.dashboard__body .container .builder__body-icon .icon,
+.dashboard__body .container .services__body-icon .icon {
   font-size: 20px;
   color: #0098ff;
 }
-.dashboard__body .container .box-container .domain__body-values,
-.dashboard__body .container .box-container .hosting__body-values,
-.dashboard__body .container .box-container .builder__body-values,
-.dashboard__body .container .box-container .services__body-values {
+.dashboard__body .container .domain__body-values,
+.dashboard__body .container .hosting__body-values,
+.dashboard__body .container .builder__body-values,
+.dashboard__body .container .services__body-values {
   margin-left: 1rem;
 }
-.dashboard__body .container .box-container .domain__body-values h3,
-.dashboard__body .container .box-container .hosting__body-values h3,
-.dashboard__body .container .box-container .builder__body-values h3,
-.dashboard__body .container .box-container .services__body-values h3 {
+.dashboard__body .container .domain__body-values h3,
+.dashboard__body .container .hosting__body-values h3,
+.dashboard__body .container .builder__body-values h3,
+.dashboard__body .container .services__body-values h3 {
   font-family: "Poppins", sans-serif;
   color: #7f80ad;
   font-weight: 500;
 }
-.dashboard__body .container .box-container .domain__body-values h3,
-.dashboard__body .container .box-container .hosting__body-values h3,
-.dashboard__body .container .box-container .builder__body-values h3,
-.dashboard__body .container .box-container .services__body-values h3 {
+.dashboard__body .container .domain__body-values h3,
+.dashboard__body .container .hosting__body-values h3,
+.dashboard__body .container .builder__body-values h3,
+.dashboard__body .container .services__body-values h3 {
   font-size: 16px;
 }
 @media screen and (min-width: 360px) {
-  .dashboard__body .container .box-container .domain__body-values h3,
-  .dashboard__body .container .box-container .hosting__body-values h3,
-  .dashboard__body .container .box-container .builder__body-values h3,
-  .dashboard__body .container .box-container .services__body-values h3 {
+  .dashboard__body .container .domain__body-values h3,
+  .dashboard__body .container .hosting__body-values h3,
+  .dashboard__body .container .builder__body-values h3,
+  .dashboard__body .container .services__body-values h3 {
     font-size: calc(16px + 2 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .dashboard__body .container .box-container .domain__body-values h3,
-  .dashboard__body .container .box-container .hosting__body-values h3,
-  .dashboard__body .container .box-container .builder__body-values h3,
-  .dashboard__body .container .box-container .services__body-values h3 {
+  .dashboard__body .container .domain__body-values h3,
+  .dashboard__body .container .hosting__body-values h3,
+  .dashboard__body .container .builder__body-values h3,
+  .dashboard__body .container .services__body-values h3 {
     font-size: 18px;
   }
 }
-.dashboard__body .container .box-container .domain__body-values h1,
-.dashboard__body .container .box-container .hosting__body-values h1,
-.dashboard__body .container .box-container .builder__body-values h1,
-.dashboard__body .container .box-container .services__body-values h1 {
+.dashboard__body .container .domain__body-values h1,
+.dashboard__body .container .hosting__body-values h1,
+.dashboard__body .container .builder__body-values h1,
+.dashboard__body .container .services__body-values h1 {
   font-family: "Poppins", sans-serif;
   color: #03045e;
   font-weight: 600;
   margin-top: 0.5rem;
 }
-.dashboard__body .container .box-container .domain__body-values h1,
-.dashboard__body .container .box-container .hosting__body-values h1,
-.dashboard__body .container .box-container .builder__body-values h1,
-.dashboard__body .container .box-container .services__body-values h1 {
+.dashboard__body .container .domain__body-values h1,
+.dashboard__body .container .hosting__body-values h1,
+.dashboard__body .container .builder__body-values h1,
+.dashboard__body .container .services__body-values h1 {
   font-size: 18px;
 }
 @media screen and (min-width: 360px) {
-  .dashboard__body .container .box-container .domain__body-values h1,
-  .dashboard__body .container .box-container .hosting__body-values h1,
-  .dashboard__body .container .box-container .builder__body-values h1,
-  .dashboard__body .container .box-container .services__body-values h1 {
+  .dashboard__body .container .domain__body-values h1,
+  .dashboard__body .container .hosting__body-values h1,
+  .dashboard__body .container .builder__body-values h1,
+  .dashboard__body .container .services__body-values h1 {
     font-size: calc(18px + 6 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .dashboard__body .container .box-container .domain__body-values h1,
-  .dashboard__body .container .box-container .hosting__body-values h1,
-  .dashboard__body .container .box-container .builder__body-values h1,
-  .dashboard__body .container .box-container .services__body-values h1 {
+  .dashboard__body .container .domain__body-values h1,
+  .dashboard__body .container .hosting__body-values h1,
+  .dashboard__body .container .builder__body-values h1,
+  .dashboard__body .container .services__body-values h1 {
     font-size: 24px;
   }
 }
-.dashboard__body .container .box-container .account {
+.dashboard__body .container .account {
   grid-area: 1/1/5/3;
 }
 @media screen and (max-width: 1400px) {
-  .dashboard__body .container .box-container .account {
+  .dashboard__body .container .account {
     grid-area: 1/1/5/3;
   }
 }
-.dashboard__body .container .box-container .wallet {
+.dashboard__body .container .wallet {
   grid-area: 1/3/3/5;
 }
 @media screen and (max-width: 1400px) {
-  .dashboard__body .container .box-container .wallet {
+  .dashboard__body .container .wallet {
     grid-area: 1/3/3/5;
   }
 }
-.dashboard__body .container .box-container .hosting {
+.dashboard__body .container .hosting {
   grid-area: 1/5/1/5;
 }
 @media screen and (max-width: 1400px) {
-  .dashboard__body .container .box-container .hosting {
+  .dashboard__body .container .hosting {
     grid-area: 5/2/5/2;
   }
 }
-.dashboard__body .container .box-container .builder {
+.dashboard__body .container .builder {
   grid-area: 1/6/1/6;
 }
 @media screen and (max-width: 1400px) {
-  .dashboard__body .container .box-container .builder {
+  .dashboard__body .container .builder {
     grid-area: 6/2/6/2;
   }
 }
-.dashboard__body .container .box-container .services {
+.dashboard__body .container .services {
   grid-area: 2/5/2/5;
 }
 @media screen and (max-width: 1400px) {
-  .dashboard__body .container .box-container .services {
+  .dashboard__body .container .services {
     grid-area: 6/1/6/1;
   }
 }
-.dashboard__body .container .box-container .domain {
+.dashboard__body .container .domain {
   grid-area: 2/6/2/7;
 }
 @media screen and (max-width: 1400px) {
-  .dashboard__body .container .box-container .domain {
+  .dashboard__body .container .domain {
     grid-area: 5/1/5/1;
   }
 }
-.dashboard__body .container .box-container .transactions {
+.dashboard__body .container .transactions {
   grid-area: 3/3/5/5;
 }
 @media screen and (max-width: 1400px) {
-  .dashboard__body .container .box-container .transactions {
+  .dashboard__body .container .transactions {
     grid-area: 3/3/5/5;
   }
 }
-.dashboard__body .container .box-container .security {
+.dashboard__body .container .security {
   grid-area: 3/5/5/7;
 }
 @media screen and (max-width: 1400px) {
-  .dashboard__body .container .box-container .security {
+  .dashboard__body .container .security {
     grid-area: 5/3/7/6;
   }
 }

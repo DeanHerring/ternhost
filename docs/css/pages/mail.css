@@ -167,6 +167,11 @@ input {
   display: none !important;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 .btn {
   font-family: "Poppins", sans-serif;
   color: #fff;
@@ -203,6 +208,12 @@ input {
 .btn-white:hover {
   background-color: #0098ff;
   color: #fff;
+}
+.btn-green {
+  background-color: #00c084;
+}
+.btn-red {
+  background-color: #ff7171;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -370,6 +381,11 @@ input {
 
 .hidden {
   display: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .mail {

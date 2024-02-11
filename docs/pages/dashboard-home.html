@@ -19,7 +19,89 @@
   </head>
   <body>
     <main id="wrapper">
-      <!-- Dropdown Header Menu -->
+      <!-- Setting -->
+      <section class="setting show">
+        <div class="setting__modal">
+          <header class="setting__header">
+            <h1>Profile</h1>
+            <i class="fa-regular fa-circle-xmark icon"></i>
+          </header>
+          <div class="setting__body">
+            <div class="setting__body-security">
+              <ul class="security">
+                <li class="security__item">
+                  <h1>Avatar</h1>
+                  <button class="btn btn-secondary">Add</button>
+                </li>
+                <li class="security__item">
+                  <h1>Confirmation By Email</h1>
+                  <button class="btn btn-green">Enabled</button>
+                </li>
+                <li class="security__item">
+                  <h1>Confirmation By Phone</h1>
+                  <button class="btn btn-green">Enabled</button>
+                </li>
+                <li class="security__item">
+                  <h1>Two-Factor Authentication</h1>
+                  <button class="btn btn-red">Disabled</button>
+                </li>
+              </ul>
+            </div>
+            <form class="setting__body-form">
+              <div class="box grid-2">
+                <div class="form-part">
+                  <label>First Name</label>
+                  <input type="text" placeholder="Enter your First Name" />
+                </div>
+                <div class="form-part">
+                  <label>Last Name</label>
+                  <input type="text" placeholder="Enter your Last Name" />
+                </div>
+              </div>
+              <div class="box grid-2">
+                <div class="form-part">
+                  <label>Email</label>
+                  <input type="email" placeholder="Enter your Email" />
+                </div>
+                <div class="form-part">
+                  <label>Phone</label>
+                  <input type="text" placeholder="Enter your Phone" />
+                </div>
+              </div>
+              <div class="box grid-2">
+                <div class="form-part">
+                  <label>Address</label>
+                  <input type="text" placeholder="Enter your Adress" />
+                </div>
+                <div class="form-part">
+                  <label>Country</label>
+                  <input type="text" placeholder="Enter your Country" />
+                </div>
+              </div>
+              <div class="box grid-3">
+                <div class="form-part">
+                  <label>City</label>
+                  <input type="text" placeholder="Enter your City" />
+                </div>
+                <div class="form-part">
+                  <label>State</label>
+                  <input type="text" placeholder="Enter your State or Province" />
+                </div>
+                <div class="form-part">
+                  <label>Zip Code</label>
+                  <input type="text" placeholder="Enter your Zip Code" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <footer class="setting__footer">
+            <button class="btn btn-white">Cancel</button>
+            <button class="btn btn-white">Save</button>
+          </footer>
+        </div>
+      </section>
+
+      <!-- Dropdown -->
       <section class="dropdown">
         <header class="dropdown__header">
           <a href="/" class="dropdown__header-logo">
