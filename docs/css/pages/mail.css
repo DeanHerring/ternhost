@@ -167,11 +167,6 @@ input {
   display: none !important;
 }
 
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-
 .btn {
   font-family: "Poppins", sans-serif;
   color: #fff;
@@ -381,11 +376,6 @@ input {
 
 .hidden {
   display: none !important;
-}
-
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
 }
 
 .mail {

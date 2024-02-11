@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ternhost | Dashboard Domain</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Libs -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/pages/dashboard-domain.css" />
+  </head>
+  <body>
+    <main id="wrapper">
+      <section class="dashboard">
+        <aside class="dashboard__sidebar">
+          <div class="dashboard__sidebar-top">
+            <a href="/" class="dashboard__sidebar-top__logo">
+              <img src="/assets/images/header-logo.svg" alt="Logo" />
+              <h1>Ternhost</h1>
+            </a>
+
+            <div class="menu">
+              <ul class="menu__group">
+                <li class="menu__group-item">
+                  <a href="#" class="active">
+                    <i class="fa-solid fa-house icon"></i>
+                    <h3>Home</h3>
+                  </a>
+                </li>
+                <li class="menu__group-item">
+                  <a href="#">
+                    <i class="fa-solid fa-shield-halved icon"></i>
+                    <h3>Domain</h3>
+                  </a>
+                </li>
+                <li class="menu__group-item">
+                  <a href="#">
+                    <i class="fa-solid fa-server icon"></i>
+                    <h3>Hosting</h3>
+                  </a>
+                </li>
+                <li class="menu__group-item">
+                  <a href="#">
+                    <i class="fa-solid fa-desktop icon"></i>
+                    <h3>Website Builder</h3>
+                  </a>
+                </li>
+                <li class="menu__group-item">
+                  <a href="#">
+                    <i class="fa-solid fa-microchip icon"></i>
+                    <h3>Other Services</h3>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dashboard__sidebar-support">
+            <div class="dashboard__sidebar-support__text">
+              <h1>Need Help?</h1>
+              <h3>Write to us, our specialists will tell you how to solve your problem as quickly as possible</h3>
+            </div>
+            <button class="btn btn-white">Support</button>
+          </div>
+        </aside>
+
+        <div class="dashboard__body">
+          <div class="dashboard__body-help">
+            <i class="fa-solid fa-circle-question icon"></i>
+          </div>
+
+          <header class="dashboard__body-header">
+            <div class="container">
+              <div class="header__body">
+                <h1 class="header__body-page">Domain</h1>
+                <img class="header__body-user" src="/assets/images/login-person.jpg" alt="User" />
+                <div class="header__body-mobile">
+                  <a href="/" class="header__body-mobile__logo">
+                    <img src="/assets/images/header-logo.svg" alt="Logo" />
+                    <h1>Ternhost</h1>
+                  </a>
+                  <div class="header__body-mobile__bars">
+                    <i class="fa-solid fa-bars icon"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <div class="container">
+            <div class="table">
+              <div class="table__content">
+                <header class="table__header">
+                  <ul class="table__header-group">
+                    <li class="table__header-group__item">Services</li>
+                    <li class="table__header-group__item">Status</li>
+                    <li class="table__header-group__item">Active Until</li>
+                    <li class="table__header-group__item">Auto renewal</li>
+                    <li class="table__header-group__item">Actions</li>
+                  </ul>
+                </header>
+
+                <div class="table__body">
+                  <ul class="rows">
+                    <li class="rows__item">
+                      <div class="rows__item-service">
+                        <div class="rows__item-service__icon">
+                          <i class="fa-solid fa-shield-halved icon"></i>
+                        </div>
+                        <div class="rows__item-service__text">
+                          <h1>game.io</h1>
+                          <h3>Domain</h3>
+                        </div>
+                      </div>
+                      <div class="rows__item-status">
+                        <h1 class="online">Online</h1>
+                      </div>
+                      <div class="rows__item-active">
+                        <h1>01/01/2025</h1>
+                      </div>
+                      <div class="rows__item-renewal">
+                        <div class="switch active"></div>
+                      </div>
+                      <div class="rows__item-actions">
+                        <button class="btn btn-white">Renew</button>
+                      </div>
+                    </li>
+                    <li class="rows__item">
+                      <div class="rows__item-service">
+                        <div class="rows__item-service__icon">
+                          <i class="fa-solid fa-shield-halved icon"></i>
+                        </div>
+                        <div class="rows__item-service__text">
+                          <h1>best.store</h1>
+                          <h3>Domain</h3>
+                        </div>
+                      </div>
+                      <div class="rows__item-status">
+                        <h1 class="offline">Offline</h1>
+                      </div>
+                      <div class="rows__item-active">
+                        <h1>01/01/2025</h1>
+                      </div>
+                      <div class="rows__item-renewal">
+                        <div class="switch"></div>
+                      </div>
+                      <div class="rows__item-actions">
+                        <button class="btn btn-white">Renew</button>
+                      </div>
+                    </li>
+                    <li class="rows__item">
+                      <div class="rows__item-service">
+                        <div class="rows__item-service__icon">
+                          <i class="fa-solid fa-shield-halved icon"></i>
+                        </div>
+                        <div class="rows__item-service__text">
+                          <h1>domain.net</h1>
+                          <h3>Domain</h3>
+                        </div>
+                      </div>
+                      <div class="rows__item-status">
+                        <h1 class="online">Online</h1>
+                      </div>
+                      <div class="rows__item-active">
+                        <h1>01/01/2025</h1>
+                      </div>
+                      <div class="rows__item-renewal">
+                        <div class="switch active"></div>
+                      </div>
+                      <div class="rows__item-actions">
+                        <button class="btn btn-white">Renew</button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="continue-order">
+              <button class="btn btn-secondary">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
