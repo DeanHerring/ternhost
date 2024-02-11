@@ -1,0 +1,48 @@
+@import '../common/variables', '../common/mixins';
+
+.dropdown {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $white-300;
+  z-index: 9999;
+  padding: 1rem;
+  display: none;
+  &.show {
+    display: block;
+  }
+  &__header {
+    @include center-y;
+    justify-content: space-between;
+    &-logo {
+      @include center-y;
+      h1 {
+        @include fluid-type($text-4xl, $text-4xl);
+        @include text(700, $blue-200);
+        text-transform: uppercase;
+        margin-left: 0.5rem;
+      }
+    }
+    .icon {
+      font-size: $text-4xl;
+      color: $blue-200;
+    }
+  }
+  &__menu {
+    margin-top: 5rem;
+    &-group {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5rem;
+      text-align: center;
+      &__item {
+        a {
+          @include fluid-type($text-base, $text-base);
+          @include text(500, $blue-200);
+        }
+      }
+    }
+  }
+}
