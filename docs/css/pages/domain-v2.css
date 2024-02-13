@@ -750,6 +750,16 @@ input {
 .hero {
   padding-top: 14.688rem;
 }
+.hero .container {
+  background-image: url("/assets/images/domain-feature-background.svg");
+  background-repeat: no-repeat;
+  background-position: 100% -75%;
+}
+@media screen and (max-width: 1100px) {
+  .hero .container {
+    background-image: none;
+  }
+}
 @media screen and (max-width: 600px) {
   .hero .container .search-box .search {
     display: flex;
@@ -827,6 +837,9 @@ input {
   color: #0098ff;
 }
 .hero .container .domains {
+  background-color: #fff;
+  position: relative;
+  z-index: 9999;
   margin-top: 6.25rem;
 }
 .hero .container .domains__group {

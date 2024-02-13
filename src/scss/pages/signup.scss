@@ -11,6 +11,12 @@
   .container {
     height: 100%;
     position: relative;
+    background-image: url('/assets/images/login-background.svg');
+    background-repeat: no-repeat;
+    background-position: 40% calc(100% + 100px);
+    @media screen and (max-width: 1100px) {
+      background-image: none;
+    }
     @media screen and (max-width: 900px) {
       @include center-col;
       padding: 2.5rem 0;
