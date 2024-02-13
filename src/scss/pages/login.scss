@@ -14,6 +14,7 @@
     @media screen and (max-width: 900px) {
       @include center-col;
       padding: 2.5rem 0;
+      min-height: 100vh;
     }
     .header {
       &__logo {
@@ -28,6 +29,10 @@
     }
     .hero-group {
       margin: 2.5rem 0;
+      @media screen and (max-width: 900px) {
+        @include center;
+        width: 100%;
+      }
       .hero-text {
         margin-top: 5rem;
         @media screen and (max-width: 900px) {

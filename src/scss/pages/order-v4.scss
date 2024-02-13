@@ -116,8 +116,10 @@
               h3 {
                 @include fluid-type($text-base, $text-base, 700, $blue-200);
                 span {
-                  text-decoration: line-through;
                   color: $gray-200;
+                  &.line-through {
+                    text-decoration: line-through;
+                  }
                 }
               }
             }
@@ -301,9 +303,7 @@
                       &.discount {
                         @include fluid-type($text-base, $text-base, 700, $blue-200);
                         text-decoration: none;
-                      }
-                      &:first-child {
-                        margin-right: 0.5rem;
+                        margin-left: 0.5rem;
                       }
                     }
                   }

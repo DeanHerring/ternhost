@@ -489,7 +489,7 @@ input {
   color: #fff;
 }
 .top .header {
-  backdrop-filter: blur(2.5rem);
+  background-color: #fff;
 }
 .top .header .container {
   display: flex;

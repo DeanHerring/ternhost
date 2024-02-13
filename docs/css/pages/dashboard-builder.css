@@ -603,6 +603,7 @@ input {
 }
 .dashboard__body .container .table__content .table__body .rows__item-service, .dashboard__body .container .table__content .table__body .rows__item-status, .dashboard__body .container .table__content .table__body .rows__item-active, .dashboard__body .container .table__content .table__body .rows__item-renewal, .dashboard__body .container .table__content .table__body .rows__item-actions {
   padding: 1rem 0;
+  border: 1px solid red;
 }
 .dashboard__body .container .table__content .table__body .rows__item-service {
   display: flex;

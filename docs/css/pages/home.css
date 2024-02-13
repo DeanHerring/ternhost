@@ -489,7 +489,7 @@ input {
   color: #fff;
 }
 .top .header {
-  backdrop-filter: blur(2.5rem);
+  background-color: #fff;
 }
 .top .header .container {
   display: flex;
@@ -912,11 +912,6 @@ input {
 }
 @media screen and (max-width: 1100px) {
   .sentence .container .sentence-body .domains__group {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (max-width: 600px) {
-  .sentence .container .sentence-body .domains__group {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
   }
@@ -1232,11 +1227,6 @@ input {
   grid-template-columns: repeat(4, 1fr);
 }
 @media screen and (max-width: 1000px) {
-  .pricing .container .pricing-body .pricing__plans-group {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (max-width: 800px) {
   .pricing .container .pricing-body .pricing__plans-group {
     grid-template-columns: repeat(2, 1fr);
   }

@@ -282,7 +282,7 @@
         .box {
           background-color: $white-100;
           border-radius: 1.5rem;
-          padding: 1rem;
+          padding: 2rem;
         }
         .account {
           display: flex;
@@ -307,6 +307,7 @@
                 @include fluid-type($text-3xl, $text-3xl, 600, $blue-200);
               }
               &__address {
+                margin-top: 0.625rem;
                 @include center-y;
                 .icon {
                   color: $gray-200;
@@ -363,7 +364,7 @@
             }
             &-up {
               @include center;
-              width: 3rem;
+              width: 2rem;
               aspect-ratio: 1 / 1;
               border-radius: 50%;
               background-color: $white-100;
@@ -375,8 +376,9 @@
             }
           }
           &__footer {
+            @include center-y-between;
             h1 {
-              @include fluid-type($text-5xl, $text-5xl, 500, $white-100);
+              @include fluid-type($text-5xl, $text-5xl, 700, $white-100);
             }
             padding-top: 3rem;
           }

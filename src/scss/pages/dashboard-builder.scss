@@ -198,6 +198,7 @@
                 &-renewal,
                 &-actions {
                   padding: 1rem 0;
+                  border: 1px solid red;
                 }
                 &-service {
                   @include center-y;

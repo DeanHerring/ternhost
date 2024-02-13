@@ -50,7 +50,8 @@
 }
 
 .hero {
-  padding: 7.5rem 0;
+  @include center-y;
+  min-height: 100vh;
   .container {
     .hero-body {
       @include center-y-between;

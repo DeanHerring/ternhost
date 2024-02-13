@@ -742,7 +742,7 @@ input {
 .dashboard__body .container .box-container .box {
   background-color: #fff;
   border-radius: 1.5rem;
-  padding: 1rem;
+  padding: 2rem;
 }
 .dashboard__body .container .box-container .account {
   display: flex;
@@ -789,6 +789,7 @@ input {
   }
 }
 .dashboard__body .container .box-container .account__header-text__address {
+  margin-top: 0.625rem;
   display: flex;
   align-items: center;
 }
@@ -905,7 +906,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 3rem;
+  width: 2rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: #fff;
@@ -916,12 +917,15 @@ input {
   color: #0098ff;
 }
 .dashboard__body .container .box-container .wallet__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 3rem;
 }
 .dashboard__body .container .box-container .wallet__footer h1 {
   font-family: "Poppins", sans-serif;
   color: #fff;
-  font-weight: 500;
+  font-weight: 700;
 }
 .dashboard__body .container .box-container .wallet__footer h1 {
   font-size: 48px;

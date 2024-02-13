@@ -24,7 +24,7 @@
     }
   }
   .header {
-    backdrop-filter: blur(2.5rem);
+    background-color: $white-100;
     .container {
       @include center-y-between;
       padding: 1rem 0;

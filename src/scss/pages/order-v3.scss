@@ -47,7 +47,7 @@
             transition: all 0.2s;
             cursor: pointer;
             @media screen and (max-width: 800px) {
-              padding: 0.5rem;
+              padding: 2rem 0.5rem;
             }
             &.active,
             &:hover {

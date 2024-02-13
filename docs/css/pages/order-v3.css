@@ -562,7 +562,7 @@ input {
 }
 @media screen and (max-width: 800px) {
   .hero .container .plans__time-group__item {
-    padding: 0.5rem;
+    padding: 2rem 0.5rem;
   }
 }
 .hero .container .plans__time-group__item.active, .hero .container .plans__time-group__item:hover {

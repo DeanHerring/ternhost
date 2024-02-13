@@ -188,6 +188,7 @@ input {
     align-items: center;
     flex-direction: column;
     padding: 2.5rem 0;
+    min-height: 100vh;
   }
 }
 .hero .container .header__logo {
@@ -217,6 +218,14 @@ input {
 }
 .hero .container .hero-group {
   margin: 2.5rem 0;
+}
+@media screen and (max-width: 900px) {
+  .hero .container .hero-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 }
 .hero .container .hero-group .hero-text {
   margin-top: 5rem;

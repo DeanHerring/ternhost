@@ -670,8 +670,10 @@ input {
   }
 }
 .hero .container .order-wrapper .basket .box__select-active h3 span {
-  text-decoration: line-through;
   color: #7f80ad;
+}
+.hero .container .order-wrapper .basket .box__select-active h3 span.line-through {
+  text-decoration: line-through;
 }
 .hero .container .order-wrapper .basket .box__services-header {
   display: flex;
@@ -1042,6 +1044,7 @@ input {
   color: #03045e;
   font-weight: 700;
   text-decoration: none;
+  margin-left: 0.5rem;
 }
 .hero .container .order-wrapper .orders .box__services .services__group-item__price h3.discount {
   font-size: 16px;
@@ -1055,9 +1058,6 @@ input {
   .hero .container .order-wrapper .orders .box__services .services__group-item__price h3.discount {
     font-size: 16px;
   }
-}
-.hero .container .order-wrapper .orders .box__services .services__group-item__price h3:first-child {
-  margin-right: 0.5rem;
 }
 .hero .container .order-wrapper .orders .box__compute {
   margin-top: 2rem;
