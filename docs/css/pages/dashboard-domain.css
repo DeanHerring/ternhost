@@ -189,25 +189,24 @@ input {
 }
 .btn-primary {
   background-color: #03045e;
+  border: 0.125rem solid #03045e;
 }
 .btn-secondary {
   background-color: #0098ff;
+  border: 0.125rem solid #0098ff;
 }
 .btn-white {
   background-color: #fff;
   border: 0.125rem solid #0098ff;
   color: #0098ff;
-  transition: all 0.2s;
-}
-.btn-white:hover {
-  background-color: #0098ff;
-  color: #fff;
 }
 .btn-green {
   background-color: #00c084;
+  border: 0.125rem solid #00c084;
 }
 .btn-red {
   background-color: #ff7171;
+  border: 0.125rem solid #ff7171;
 }
 
 .dropdown {
@@ -551,188 +550,159 @@ input {
 }
 .dashboard__body .container {
   width: 100%;
-  padding: 0.625rem;
 }
-.dashboard__body .container .table {
+.dashboard__body .container .table-wrapper {
+  overflow: auto;
+}
+.dashboard__body .container .table-wrapper .table {
   width: 100%;
-  margin-top: 1.5rem;
-  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0 1rem;
 }
-@media screen and (max-width: 1100px) {
-  .dashboard__body .container .table__content {
-    overflow-x: scroll;
-  }
+.dashboard__body .container .table-wrapper .table__header, .dashboard__body .container .table-wrapper .table__body {
+  white-space: nowrap;
 }
-@media screen and (max-width: 1100px) {
-  .dashboard__body .container .table__content .table__header,
-  .dashboard__body .container .table__content .table__body,
-  .dashboard__body .container .table__content .table__footer {
-    width: 1100px;
-  }
-}
-.dashboard__body .container .table__content .table__header {
-  border-radius: 1.5rem;
-}
-.dashboard__body .container .table__content .table__header-group {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 1rem;
-  padding: 0 1rem;
-  background-color: #fff;
-  border-radius: 1.5rem;
-}
-.dashboard__body .container .table__content .table__header-group__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.dashboard__body .container .table-wrapper .table__header tr th, .dashboard__body .container .table-wrapper .table__body tr th {
   font-family: "Poppins", sans-serif;
   color: #232323;
   font-weight: 600;
-  padding: 1rem 0;
+  background-color: #fff;
+  padding: 1rem;
+  text-align: left;
 }
-.dashboard__body .container .table__content .table__header-group__item {
+.dashboard__body .container .table-wrapper .table__header tr th, .dashboard__body .container .table-wrapper .table__body tr th {
   font-size: 18px;
 }
 @media screen and (min-width: 360px) {
-  .dashboard__body .container .table__content .table__header-group__item {
+  .dashboard__body .container .table-wrapper .table__header tr th, .dashboard__body .container .table-wrapper .table__body tr th {
     font-size: calc(18px + 0 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .dashboard__body .container .table__content .table__header-group__item {
+  .dashboard__body .container .table-wrapper .table__header tr th, .dashboard__body .container .table-wrapper .table__body tr th {
     font-size: 18px;
   }
 }
-.dashboard__body .container .table__content .table__body .rows__item {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  border-radius: 1.5rem;
-  margin-top: 0.5rem;
-  padding: 0 1rem;
-  background-color: #fff;
+.dashboard__body .container .table-wrapper .table__header tr th:first-child, .dashboard__body .container .table-wrapper .table__body tr th:first-child {
+  border-radius: 25px 0 0 25px;
 }
-.dashboard__body .container .table__content .table__body .rows__item-service, .dashboard__body .container .table__content .table__body .rows__item-status, .dashboard__body .container .table__content .table__body .rows__item-active, .dashboard__body .container .table__content .table__body .rows__item-renewal, .dashboard__body .container .table__content .table__body .rows__item-actions {
+.dashboard__body .container .table-wrapper .table__header tr th:last-child, .dashboard__body .container .table-wrapper .table__body tr th:last-child {
+  border-radius: 0 25px 25px 0;
+}
+.dashboard__body .container .table-wrapper .table__header tr th {
+  padding: 2rem 1rem;
+}
+.dashboard__body .container .table-wrapper .table__body tr .table-item__service {
+  display: flex;
+  align-items: center;
+}
+.dashboard__body .container .table-wrapper .table__body tr .table-item__service-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
-}
-.dashboard__body .container .table__content .table__body .rows__item-service {
-  display: flex;
-  align-items: center;
-}
-.dashboard__body .container .table__content .table__body .rows__item-service__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
+  width: 54px;
   aspect-ratio: 1/1;
-  background-color: rgba(0, 152, 255, 0.1);
   border-radius: 50%;
+  background-color: rgba(0, 152, 255, 0.1);
 }
-.dashboard__body .container .table__content .table__body .rows__item-service__icon .icon {
+.dashboard__body .container .table-wrapper .table__body tr .table-item__service-icon .icon {
   color: #0098ff;
-  font-weight: 700;
   font-size: 20px;
 }
-.dashboard__body .container .table__content .table__body .rows__item-service__text {
+.dashboard__body .container .table-wrapper .table__body tr .table-item__service-text {
   margin-left: 0.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: clip;
 }
-.dashboard__body .container .table__content .table__body .rows__item-service__text h1 {
+.dashboard__body .container .table-wrapper .table__body tr .table-item__service-text h2 {
   font-family: "Poppins", sans-serif;
   color: #232323;
   font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: clip;
 }
-.dashboard__body .container .table__content .table__body .rows__item-service__text h1 {
+.dashboard__body .container .table-wrapper .table__body tr .table-item__service-text h2 {
   font-size: 18px;
 }
 @media screen and (min-width: 360px) {
-  .dashboard__body .container .table__content .table__body .rows__item-service__text h1 {
+  .dashboard__body .container .table-wrapper .table__body tr .table-item__service-text h2 {
     font-size: calc(18px + 0 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .dashboard__body .container .table__content .table__body .rows__item-service__text h1 {
+  .dashboard__body .container .table-wrapper .table__body tr .table-item__service-text h2 {
     font-size: 18px;
   }
 }
-.dashboard__body .container .table__content .table__body .rows__item-service__text h3 {
+.dashboard__body .container .table-wrapper .table__body tr .table-item__service-text h3 {
   font-family: "Poppins", sans-serif;
-  color: #7f80ad;
+  color: #b4b4cf;
   font-weight: 500;
   margin-top: 0.25rem;
+  text-align: left;
 }
-.dashboard__body .container .table__content .table__body .rows__item-service__text h3 {
-  font-size: 14px;
+.dashboard__body .container .table-wrapper .table__body tr .table-item__service-text h3 {
+  font-size: 16px;
 }
 @media screen and (min-width: 360px) {
-  .dashboard__body .container .table__content .table__body .rows__item-service__text h3 {
-    font-size: calc(14px + 0 * (100vw - 360px) / 1560);
+  .dashboard__body .container .table-wrapper .table__body tr .table-item__service-text h3 {
+    font-size: calc(16px + 0 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .dashboard__body .container .table__content .table__body .rows__item-service__text h3 {
-    font-size: 14px;
+  .dashboard__body .container .table-wrapper .table__body tr .table-item__service-text h3 {
+    font-size: 16px;
   }
 }
-.dashboard__body .container .table__content .table__body .rows__item-status h1 {
+.dashboard__body .container .table-wrapper .table__body tr .table-item__status h3 {
   font-family: "Poppins", sans-serif;
   color: #000;
   font-weight: 700;
   text-transform: uppercase;
 }
-.dashboard__body .container .table__content .table__body .rows__item-status h1 {
+.dashboard__body .container .table-wrapper .table__body tr .table-item__status h3 {
   font-size: 16px;
 }
 @media screen and (min-width: 360px) {
-  .dashboard__body .container .table__content .table__body .rows__item-status h1 {
+  .dashboard__body .container .table-wrapper .table__body tr .table-item__status h3 {
     font-size: calc(16px + 0 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .dashboard__body .container .table__content .table__body .rows__item-status h1 {
+  .dashboard__body .container .table-wrapper .table__body tr .table-item__status h3 {
     font-size: 16px;
   }
 }
-.dashboard__body .container .table__content .table__body .rows__item-status h1.online {
+.dashboard__body .container .table-wrapper .table__body tr .table-item__status h3.online {
   color: #00c084;
 }
-.dashboard__body .container .table__content .table__body .rows__item-status h1.offline {
+.dashboard__body .container .table-wrapper .table__body tr .table-item__status h3.offline {
   color: #ff7171;
 }
-.dashboard__body .container .table__content .table__body .rows__item-active h1 {
+.dashboard__body .container .table-wrapper .table__body tr .table-item__active h3 {
   font-family: "Poppins", sans-serif;
   color: #03045e;
-  font-weight: 700;
+  font-weight: 600;
 }
-.dashboard__body .container .table__content .table__body .rows__item-active h1 {
+.dashboard__body .container .table-wrapper .table__body tr .table-item__active h3 {
   font-size: 16px;
 }
 @media screen and (min-width: 360px) {
-  .dashboard__body .container .table__content .table__body .rows__item-active h1 {
+  .dashboard__body .container .table-wrapper .table__body tr .table-item__active h3 {
     font-size: calc(16px + 0 * (100vw - 360px) / 1560);
   }
 }
 @media screen and (min-width: 1920px) {
-  .dashboard__body .container .table__content .table__body .rows__item-active h1 {
+  .dashboard__body .container .table-wrapper .table__body tr .table-item__active h3 {
     font-size: 16px;
   }
 }
-.dashboard__body .container .table__content .table__body .rows__item-renewal .switch {
+.dashboard__body .container .table-wrapper .table__body tr .table-item__renewal .switch {
   width: 3.938rem;
   height: 1.875rem;
   border-radius: 3.125rem;
   background-color: #7f80ad;
   position: relative;
+  top: 0.5rem;
   cursor: pointer;
 }
-.dashboard__body .container .table__content .table__body .rows__item-renewal .switch::after {
+.dashboard__body .container .table-wrapper .table__body tr .table-item__renewal .switch::after {
   content: "";
   position: absolute;
   top: 0.188rem;
@@ -742,17 +712,22 @@ input {
   background-color: #fff;
   border-radius: 50%;
 }
-.dashboard__body .container .table__content .table__body .rows__item-renewal .switch.active {
+.dashboard__body .container .table-wrapper .table__body tr .table-item__renewal .switch.active {
   background-color: #0098ff;
 }
-.dashboard__body .container .table__content .table__body .rows__item-renewal .switch.active::after {
+.dashboard__body .container .table-wrapper .table__body tr .table-item__renewal .switch.active::after {
   left: calc(100% - 0.188rem);
   transform: translateX(-100%);
+}
+.dashboard__body .container .table-wrapper .table__body tr .table-item__actions button {
+  margin-left: 0.5rem;
+}
+.dashboard__body .container .table-wrapper .table__body tr .table-item__actions button:first-child {
+  margin-left: 0;
 }
 .dashboard__body .container .continue__order {
   background-color: #fff;
   border-radius: 1.5rem;
   padding: 1rem 2rem;
-  margin-top: 0.5rem;
   text-align: center;
 }

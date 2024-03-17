@@ -189,25 +189,24 @@ input {
 }
 .btn-primary {
   background-color: #03045e;
+  border: 0.125rem solid #03045e;
 }
 .btn-secondary {
   background-color: #0098ff;
+  border: 0.125rem solid #0098ff;
 }
 .btn-white {
   background-color: #fff;
   border: 0.125rem solid #0098ff;
   color: #0098ff;
-  transition: all 0.2s;
-}
-.btn-white:hover {
-  background-color: #0098ff;
-  color: #fff;
 }
 .btn-green {
   background-color: #00c084;
+  border: 0.125rem solid #00c084;
 }
 .btn-red {
   background-color: #ff7171;
+  border: 0.125rem solid #ff7171;
 }
 
 .dropdown {

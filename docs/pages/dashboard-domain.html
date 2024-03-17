@@ -96,92 +96,125 @@
           </header>
 
           <div class="container">
-            <div class="table">
-              <div class="table__content">
-                <header class="table__header">
-                  <ul class="table__header-group">
-                    <li class="table__header-group__item">Services</li>
-                    <li class="table__header-group__item">Status</li>
-                    <li class="table__header-group__item">Active Until</li>
-                    <li class="table__header-group__item">Auto renewal</li>
-                    <li class="table__header-group__item">Actions</li>
-                  </ul>
-                </header>
+            <div class="table-wrapper">
+              <table class="table">
+                <thead class="table__header">
+                  <tr>
+                    <th>Services</th>
+                    <th>Status</th>
+                    <th>Active Until</th>
+                    <th>Auto Renewal</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
 
-                <div class="table__body">
-                  <ul class="rows">
-                    <li class="rows__item">
-                      <div class="rows__item-service">
-                        <div class="rows__item-service__icon">
+                <tbody class="table__body">
+                  <tr>
+                    <th class="table-item service">
+                      <div class="table-item__service">
+                        <div class="table-item__service-icon">
                           <i class="fa-solid fa-shield-halved icon"></i>
                         </div>
-                        <div class="rows__item-service__text">
-                          <h1>game.io</h1>
+                        <div class="table-item__service-text">
+                          <h2>game.io</h2>
                           <h3>Domain</h3>
                         </div>
                       </div>
-                      <div class="rows__item-status">
-                        <h1 class="online">Online</h1>
+                    </th>
+                    <th class="table-item">
+                      <div class="table-item__status">
+                        <h3 class="online">online</h3>
                       </div>
-                      <div class="rows__item-active">
-                        <h1>01/01/2025</h1>
+                    </th>
+                    <th class="table-item">
+                      <div class="table-item__active">
+                        <h3>01/01/2025</h3>
                       </div>
-                      <div class="rows__item-renewal">
+                    </th>
+                    <th class="table-item">
+                      <div class="table-item__renewal">
                         <div class="switch active"></div>
                       </div>
-                      <div class="rows__item-actions">
+                    </th>
+                    <th class="table-item">
+                      <div class="table-item__actions">
                         <button class="btn btn-white">Renew</button>
+                        <button class="btn btn-secondary">Controls</button>
                       </div>
-                    </li>
-                    <li class="rows__item">
-                      <div class="rows__item-service">
-                        <div class="rows__item-service__icon">
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th class="table-item service">
+                      <div class="table-item__service">
+                        <div class="table-item__service-icon">
                           <i class="fa-solid fa-shield-halved icon"></i>
                         </div>
-                        <div class="rows__item-service__text">
-                          <h1>best.store</h1>
+                        <div class="table-item__service-text">
+                          <h2>superverylongdomainfartisit.com</h2>
                           <h3>Domain</h3>
                         </div>
                       </div>
-                      <div class="rows__item-status">
-                        <h1 class="offline">Offline</h1>
+                    </th>
+                    <th class="table-item">
+                      <div class="table-item__status">
+                        <h3 class="online">online</h3>
                       </div>
-                      <div class="rows__item-active">
-                        <h1>01/01/2025</h1>
+                    </th>
+                    <th class="table-item">
+                      <div class="table-item__active">
+                        <h3>01/01/2025</h3>
                       </div>
-                      <div class="rows__item-renewal">
-                        <div class="switch"></div>
-                      </div>
-                      <div class="rows__item-actions">
-                        <button class="btn btn-white">Renew</button>
-                      </div>
-                    </li>
-                    <li class="rows__item">
-                      <div class="rows__item-service">
-                        <div class="rows__item-service__icon">
-                          <i class="fa-solid fa-shield-halved icon"></i>
-                        </div>
-                        <div class="rows__item-service__text">
-                          <h1>supermegaduperverylongdomain.net</h1>
-                          <h3>Domain</h3>
-                        </div>
-                      </div>
-                      <div class="rows__item-status">
-                        <h1 class="online">Online</h1>
-                      </div>
-                      <div class="rows__item-active">
-                        <h1>01/01/2025</h1>
-                      </div>
-                      <div class="rows__item-renewal">
+                    </th>
+                    <th class="table-item">
+                      <div class="table-item__renewal">
                         <div class="switch active"></div>
                       </div>
-                      <div class="rows__item-actions">
+                    </th>
+                    <th class="table-item">
+                      <div class="table-item__actions">
                         <button class="btn btn-white">Renew</button>
+                        <button class="btn btn-secondary">Controls</button>
                       </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th class="table-item service">
+                      <div class="table-item__service">
+                        <div class="table-item__service-icon">
+                          <i class="fa-solid fa-shield-halved icon"></i>
+                        </div>
+                        <div class="table-item__service-text">
+                          <h2>game.io</h2>
+                          <h3>Domain</h3>
+                        </div>
+                      </div>
+                    </th>
+                    <th class="table-item">
+                      <div class="table-item__status">
+                        <h3 class="online">online</h3>
+                      </div>
+                    </th>
+                    <th class="table-item">
+                      <div class="table-item__active">
+                        <h3>01/01/2025</h3>
+                      </div>
+                    </th>
+                    <th class="table-item">
+                      <div class="table-item__renewal">
+                        <div class="switch active"></div>
+                      </div>
+                    </th>
+                    <th class="table-item">
+                      <div class="table-item__actions">
+                        <button class="btn btn-white">Renew</button>
+                        <button class="btn btn-secondary">Controls</button>
+                      </div>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
             <footer class="continue__order">
