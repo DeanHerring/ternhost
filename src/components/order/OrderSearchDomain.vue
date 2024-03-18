@@ -57,6 +57,8 @@ export default {
   },
   methods: {
     loadDomains(name) {
+      this.isLoading = true;
+
       const domains = useFakeDomains(name);
 
       if (domains) {

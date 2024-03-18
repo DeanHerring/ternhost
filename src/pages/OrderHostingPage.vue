@@ -8,14 +8,16 @@
     </template>
 
     <template #content>
-      <order-hosting-plans></order-hosting-plans>
+      <order-hosting-offer></order-hosting-offer>
     </template>
   </order-hero>
 
   <order-skip>
     <template #hero-skip>
       <h2>Alternatively, you have the option to bypass this step and generate <br />a domain at a later time.</h2>
-      <router-link to="/">I'll select my hosting at a later time ></router-link>
+
+      <router-link to="/order/pay" v-if="!store.isEmpty">I'll select my hosting at a later time ></router-link>
+      <router-link to="/" v-else>I'll select my hosting at a later time ></router-link>
     </template>
   </order-skip>
 
@@ -26,12 +28,13 @@
 <script>
 import OrderHero from '@/components/order/OrderHero.vue';
 import OrderSkip from '@/components/order/OrderSkip.vue';
-import OrderHostingPlans from '@/components/order/OrderHostingPlans.vue';
+import OrderHostingOffer from '@/components/order/OrderHostingOffer.vue';
 
 import AppFooter from '@/components/common/AppFooter/AppFooter.vue';
 import AppTerms from '@/components/common/AppTerms/AppTerms.vue';
 import AppPreloader from '@/components/common/AppPreloader/AppPreloader.vue';
 
+import { useCartStore } from '@/stores/useCartStore.js';
 import { usePreloader } from '@/hooks/usePreloader.js';
 
 export default {
@@ -39,10 +42,15 @@ export default {
   components: {
     OrderHero,
     OrderSkip,
-    OrderHostingPlans,
+    OrderHostingOffer,
     AppFooter,
     AppTerms,
     AppPreloader,
+  },
+  data() {
+    return {
+      store: useCartStore(),
+    };
   },
   mounted() {
     usePreloader();

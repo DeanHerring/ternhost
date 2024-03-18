@@ -7,6 +7,7 @@
   </div>
 
   <hosting-hero></hosting-hero>
+
   <app-questions :faq="faq"></app-questions>
   <app-footer></app-footer>
   <app-terms></app-terms>
@@ -23,12 +24,10 @@ export default {
   components: {
     MainPromo,
     MainHeader,
-
     AppQuestions,
     AppFooter,
     AppTerms,
     AppPreloader,
-
     HostingHero,
   },
   data() {

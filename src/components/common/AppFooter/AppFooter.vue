@@ -91,6 +91,7 @@ export default {
   width: 100%;
   padding: 6.25rem 0;
   background-color: $white-200;
+  margin-top: 3rem;
   @media screen and (max-width: 700px) {
     padding: 3.5rem 0;
   }

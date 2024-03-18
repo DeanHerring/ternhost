@@ -7,11 +7,17 @@
 
       <div class="plans">
         <div class="plans__time">
-          <tern-plans-time :times="plansTime" class="reverse"></tern-plans-time>
+          <tern-offer-durations :durations="this.offerDurations" class="reverse"></tern-offer-durations>
         </div>
         <div class="plans__box">
-          <ul class="offers" ref="plans">
-            <tern-plan v-for="plan in plans" :key="plan.id" :plan="plan"></tern-plan>
+          <ul class="offers" ref="offers">
+            <tern-offer
+              v-for="offer in this.offers"
+              :key="offer.id"
+              :offer="offer"
+              :activeDuration="this.getActiveOfferDuration()"
+              :isBest="offer.id === 6"
+            ></tern-offer>
           </ul>
         </div>
       </div>
@@ -23,62 +29,34 @@
 import BaseContainer from '@/components/UI/BaseContainer.vue';
 import BaseButton from '@/components/UI/BaseButton.vue';
 
-import TernPlansTime from '@/components/tern/TernPlansTime.vue';
-import TernPlan from '@/components/tern/TernPlan.vue';
+import TernOfferDurations from '@/components/tern/TernOfferDurations.vue';
+import TernOffer from '@/components/tern/TernOffer.vue';
 
-import { useLoadPlans } from '@/hooks/useLoadPlans.js';
-import { gsap } from 'gsap';
+import { useLoadOffers } from '@/hooks/useLoadOffers.js';
+import { offersMixin } from '@/mixins/offers.js';
 
 export default {
   name: 'HostingHero',
   components: {
     BaseContainer,
     BaseButton,
-
-    TernPlan,
-    TernPlansTime,
+    TernOffer,
+    TernOfferDurations,
   },
+  mixins: [offersMixin],
   data() {
     return {
-      plansTime: [
+      offerDurations: [
         { id: 0, value: 1, isActive: false },
         { id: 1, value: 12, isActive: true },
         { id: 2, value: 36, isActive: false },
         { id: 3, value: 48, isActive: false },
       ],
-      plans: [],
+      offers: [],
     };
   },
   mounted() {
-    this.plans = useLoadPlans(12);
-
-    this.$emitter.on('_home_-load-plans', (months) => this.animate(months));
-    this.$emitter.on('_home_-set-active-plans-time', (id) => {
-      this.resetActivePlansTime();
-      this.setActivePlansTime(id);
-    });
-  },
-  methods: {
-    animate(months) {
-      const tl = gsap.timeline();
-
-      tl.to(this.$refs.plans, {
-        opacity: 0,
-        y: '10%',
-        duration: 0.5,
-        onComplete: () => (this.plans = useLoadPlans(months)),
-      }).to(this.$refs.plans, {
-        opacity: 1,
-        y: 0,
-        duration: 0.5,
-      });
-    },
-    setActivePlansTime(id) {
-      this.plansTime[id].isActive = true;
-    },
-    resetActivePlansTime() {
-      this.plansTime.forEach((time) => (time.isActive = false));
-    },
+    this.offers = useLoadOffers('hosting');
   },
 };
 </script>

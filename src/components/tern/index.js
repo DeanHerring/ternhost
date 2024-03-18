@@ -4,8 +4,8 @@ import TernFastLoginItem from './TernFastLoginItem.vue';
 import TernFastLoginPlug from './TernFastLoginPlug.vue';
 import TernLoginHero from './TernLoginHero.vue';
 import TernLoginTemplate from './TernLoginTemplate.vue';
-import TernPlan from './TernPlan.vue';
-import TernPlansTime from './TernPlansTime.vue';
+import TernOffer from './TernOffer.vue';
+import TernOfferDurations from './TernOfferDurations.vue';
 
 export {
   TernDomainOffer,
@@ -14,6 +14,6 @@ export {
   TernFastLoginPlug,
   TernLoginHero,
   TernLoginTemplate,
-  TernPlan,
-  TernPlansTime,
+  TernOffer,
+  TernOfferDurations,
 };

@@ -5,12 +5,18 @@
 
       <div class="pricing-body">
         <div class="pricing__time">
-          <tern-plans-time :times="plansTime"></tern-plans-time>
+          <tern-offer-durations :durations="this.offerDurations"></tern-offer-durations>
         </div>
 
         <div class="pricing__plans">
-          <ul class="pricing__plans-group" ref="plans">
-            <tern-plan v-for="plan in plans" :key="plan.id" :plan="plan"></tern-plan>
+          <ul class="pricing__plans-group" ref="offers">
+            <tern-offer
+              v-for="offer in this.offers"
+              :key="offer.id"
+              :offer="offer"
+              :activeDuration="this.getActiveOfferDuration()"
+              :isBest="offer.id === 2"
+            ></tern-offer>
           </ul>
         </div>
       </div>
@@ -23,60 +29,33 @@ import BaseContainer from '@/components/UI/BaseContainer.vue';
 import BaseTitle from '@/components/UI/BaseTitle.vue';
 import BaseButton from '@/components/UI/BaseButton.vue';
 
-import TernPlansTime from '@/components/tern/TernPlansTime.vue';
-import TernPlan from '@/components/tern/TernPlan.vue';
+import TernOfferDurations from '@/components/tern/TernOfferDurations.vue';
+import TernOffer from '@/components/tern/TernOffer.vue';
 
-import { useLoadPlans } from '@/hooks/useLoadPlans.js';
-import { gsap } from 'gsap';
+import { useLoadOffers } from '@/hooks/useLoadOffers.js';
+import { offersMixin } from '@/mixins/offers.js';
 
 export default {
-  name: 'HomePlans',
+  name: 'HomeOffers',
   components: {
     BaseContainer,
     BaseTitle,
     BaseButton,
-    TernPlansTime,
-    TernPlan,
+    TernOfferDurations,
+    TernOffer,
   },
+  mixins: [offersMixin],
   data() {
     return {
-      plansTime: [
+      offerDurations: [
         { id: 0, value: 12, isActive: true },
         { id: 1, value: 36, isActive: false },
       ],
-      plans: [],
+      offers: [],
     };
   },
   mounted() {
-    this.plans = useLoadPlans(12);
-
-    this.$emitter.on('_home_-load-plans', (months) => this.animate(months));
-    this.$emitter.on('_home_-set-active-plans-time', (id) => {
-      this.resetActivePlansTime();
-      this.setActivePlansTime(id);
-    });
-  },
-  methods: {
-    animate(months) {
-      const tl = gsap.timeline();
-
-      tl.to(this.$refs.plans, {
-        opacity: 0,
-        y: '10%',
-        duration: 0.5,
-        onComplete: () => (this.plans = useLoadPlans(months)),
-      }).to(this.$refs.plans, {
-        opacity: 1,
-        y: 0,
-        duration: 0.5,
-      });
-    },
-    setActivePlansTime(id) {
-      if (this.plansTime[id]) this.plansTime[id].isActive = true;
-    },
-    resetActivePlansTime() {
-      this.plansTime.forEach((time) => (time.isActive = false));
-    },
+    this.offers = useLoadOffers('home');
   },
 };
 </script>

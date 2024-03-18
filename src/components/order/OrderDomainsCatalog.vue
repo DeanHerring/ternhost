@@ -39,10 +39,10 @@ export default {
   props: {
     domains: Array,
   },
-  computed: {
-    store() {
-      return useCartStore();
-    },
+  data() {
+    return {
+      store: useCartStore(),
+    };
   },
   methods: {
     addToCart(domain) {

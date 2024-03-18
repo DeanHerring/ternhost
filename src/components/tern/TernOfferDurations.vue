@@ -2,32 +2,21 @@
   <ul class="plans-group">
     <li
       class="plans-group__item"
-      v-for="time in times"
-      :key="time.id"
-      :class="{ active: time.isActive }"
-      @click="
-        loadPlans(time.value);
-        setActivePlansTime(time.id);
-      "
+      v-for="duration in this.durations"
+      :key="duration.id"
+      :class="{ active: duration.isActive }"
+      @click="this.$emitter.emit('set-active-offer-duration', duration.id)"
     >
-      {{ time.value }} Month
+      {{ duration.value }} Month
     </li>
   </ul>
 </template>
 
 <script>
 export default {
-  name: 'TernPlansTime',
+  name: 'TernOfferDurations',
   props: {
-    times: Object,
-  },
-  methods: {
-    loadPlans(months) {
-      this.$emitter.emit('_home_-load-plans', months);
-    },
-    setActivePlansTime(id) {
-      this.$emitter.emit('_home_-set-active-plans-time', id);
-    },
+    durations: Object,
   },
 };
 </script>
@@ -45,7 +34,7 @@ export default {
     border-left: 0.125rem solid $blue-100;
     padding: 1.5rem;
     text-align: center;
-    transition: all 1s;
+    transition: all 0.5s;
     cursor: pointer;
     @media screen and (max-width: 900px) {
       padding: 1rem 0.5rem;

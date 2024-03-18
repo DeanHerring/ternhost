@@ -13,7 +13,7 @@
 
   <home-reviews></home-reviews>
   <home-counters></home-counters>
-  <home-plans></home-plans>
+  <home-offers></home-offers>
 
   <app-questions :faq="faq"></app-questions>
   <app-footer></app-footer>
@@ -30,7 +30,7 @@ import {
   MainHeader,
   MainPromo,
 } from '@/components/common/index.js';
-import { HomeHero, HomeSentence, HomeReviews, HomeCounters, HomePlans } from '@/components/home/index.js';
+import { HomeHero, HomeSentence, HomeReviews, HomeCounters, HomeOffers } from '@/components/home/index.js';
 import { services, faq } from '@/static/home.js';
 import { usePreloader } from '@/hooks/usePreloader.js';
 import { gsap } from 'gsap';
@@ -44,13 +44,11 @@ export default {
   components: {
     MainPromo,
     MainHeader,
-
     HomeHero,
     HomeSentence,
     HomeReviews,
     HomeCounters,
-    HomePlans,
-
+    HomeOffers,
     AppServices,
     AppQuestions,
     AppFooter,

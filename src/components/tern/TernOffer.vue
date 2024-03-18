@@ -1,22 +1,20 @@
 <template>
-  <li class="pricing__plans-group__item" :class="{ best: plan.isActive }">
+  <li class="pricing__plans-group__item" :class="{ best: isBest }">
     <header class="plan__header">
-      <h1>{{ this.plan.title }}</h1>
+      <h1>{{ this.offer.title }}</h1>
       <div class="plan__header-price">
         <div class="plan__header-price__row">
-          <h3>${{ this.plan.monthly_price }}/mo</h3>
-          <span>Save {{ this.plan.discount }}%</span>
+          <h3>${{ this.getPrice() }}/mo</h3>
+          <span>Save {{ this.getDiscount() }}%</span>
         </div>
-        <h1>
-          ${{ (this.plan.monthly_price - (this.plan.monthly_price / 100) * this.plan.discount).toFixed(2)
-          }}<span>/mo</span>
-        </h1>
+
+        <h1>${{ this.$getPriceWithDiscount(this.getPrice(), this.getDiscount()) }}<span>/mo</span></h1>
       </div>
     </header>
 
     <div class="plan__column">
       <ul class="plan__column-group">
-        <li class="plan__column-group__item" v-for="detail in this.plan.details" :key="detail.id">
+        <li class="plan__column-group__item" v-for="detail in this.offer.details" :key="detail.id">
           <h3>
             {{ detail.value }} <span>{{ detail.field }}</span>
           </h3>
@@ -26,7 +24,7 @@
 
     <footer class="plan__footer">
       <router-link to="/order/pay" v-if="this.callback">
-        <base-button class="btn-primary" @click="this.callback(this.plan)">Select</base-button>
+        <base-button class="btn-primary" @click="this.callback(this.offer)">Select</base-button>
       </router-link>
 
       <router-link to="/users/signup" v-else>
@@ -40,13 +38,24 @@
 import BaseButton from '@/components/UI/BaseButton.vue';
 
 export default {
-  name: 'TernPlan',
+  name: 'TernOffer',
   props: {
-    plan: Object,
+    offer: Object,
+
+    duration: Number,
+    isBest: Boolean,
     callback: Function,
   },
   components: {
     BaseButton,
+  },
+  methods: {
+    getPrice() {
+      return this.offer.prices.filter((price) => price.duration === this.duration)[0].price;
+    },
+    getDiscount() {
+      return this.offer.prices.filter((price) => price.duration === this.duration)[0].discount;
+    },
   },
 };
 </script>
