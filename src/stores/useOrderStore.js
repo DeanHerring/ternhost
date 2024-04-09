@@ -1,7 +1,6 @@
 import {defineStore} from 'pinia';
 import {applyDiscount} from "@/utils/applyDiscount.js";
 import {OrderType} from "@/enums/order.js";
-import app from "@/App.vue";
 
 export const useOrderStore = defineStore('order', {
     state: () => ({

@@ -95,8 +95,6 @@ import OrderViewPay from "@/components/order/pay/OrderViewPay.vue";
 
 import NotFoundPage from './pages/NotFoundPage.vue';
 
-import DemoSelect from '@/demo/DemoSelect.vue'
-
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -198,8 +196,6 @@ const router = createRouter({
             path: '/:pathMatch(.*)*',
             component: NotFoundPage
         },
-
-        {path: '/demo', component: DemoSelect},
     ],
 });
 
