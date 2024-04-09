@@ -6,11 +6,11 @@
       <div class="faq-body">
         <ul class="questions">
           <question-item
-            v-for="item in faq"
-            :key="item.id"
-            :id="item.id"
-            :question="item.question"
-            :answer="item.answer"
+              v-for="item in this.questions"
+              :key="item.id"
+              :id="item.id"
+              :question="item.question"
+              :answer="item.answer"
           ></question-item>
         </ul>
       </div>
@@ -32,7 +32,7 @@ export default {
     QuestionItem,
   },
   props: {
-    faq: Object,
+    questions: Object,
   },
 };
 </script>
@@ -42,13 +42,16 @@ export default {
 
 .faq {
   padding: 9.375rem 0;
+
   .container {
     .faq-header {
       text-align: center;
+
       h1 {
         @include fluid-type($text-4xl, $text-4xl, 700, $blue-200);
       }
     }
+
     .faq-body {
       margin-top: 4.375rem;
     }

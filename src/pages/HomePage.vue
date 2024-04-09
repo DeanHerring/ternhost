@@ -1,74 +1,39 @@
 <template>
-  <app-preloader></app-preloader>
-
   <div class="top">
-    <main-promo></main-promo>
-    <main-header></main-header>
+    <Promo/>
+    <Header/>
   </div>
 
-  <home-hero></home-hero>
-  <home-sentence></home-sentence>
+  <router-view></router-view>
 
-  <app-services :services="services.items" :title="services.title" class="gray"></app-services>
-
-  <home-reviews></home-reviews>
-  <home-counters></home-counters>
-  <home-offers></home-offers>
-
-  <app-questions :faq="faq"></app-questions>
-  <app-footer></app-footer>
-  <app-terms></app-terms>
+  <Questions :questions="this.questions"/>
+  <Footer/>
+  <Terms/>
 </template>
 
 <script>
-import {
-  AppFooter,
-  AppPreloader,
-  AppQuestions,
-  AppServices,
-  AppTerms,
-  MainHeader,
-  MainPromo,
-} from '@/components/common/index.js';
-import { HomeHero, HomeSentence, HomeReviews, HomeCounters, HomeOffers } from '@/components/home/index.js';
-import { services, faq } from '@/static/home.js';
-import { usePreloader } from '@/hooks/usePreloader.js';
-import { gsap } from 'gsap';
+import Promo from "@/components/common/MainPromo/MainPromo.vue";
+import Header from "@/components/common/MainHeader/MainHeader.vue";
+import Footer from "@/components/common/AppFooter/AppFooter.vue";
+import Terms from "@/components/common/AppTerms/AppTerms.vue";
+import Questions from "@/components/common/AppQuestions/AppQuestions.vue";
 
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import {questions} from '@/static/home.js';
 
-gsap.registerPlugin(ScrollTrigger);
 
 export default {
   name: 'HomePage',
   components: {
-    MainPromo,
-    MainHeader,
-    HomeHero,
-    HomeSentence,
-    HomeReviews,
-    HomeCounters,
-    HomeOffers,
-    AppServices,
-    AppQuestions,
-    AppFooter,
-    AppTerms,
-    AppPreloader,
+    Promo,
+    Header,
+    Footer,
+    Terms,
+    Questions,
   },
   data() {
     return {
-      services,
-      faq,
+      questions,
     };
-  },
-  mounted() {
-    usePreloader();
-
-    ScrollTrigger.create({
-      trigger: '.counters',
-      once: true,
-      onEnter: () => this.$emitter.emit('_animate_counters_-play'),
-    });
   },
 };
 </script>

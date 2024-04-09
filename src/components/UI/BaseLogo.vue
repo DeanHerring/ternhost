@@ -1,8 +1,8 @@
 <template>
-  <router-link to="/" class="header__logo" :class="{ v2: v2 }">
-    <img :src="getLogo" alt="Logo" />
+  <a href="/" class="header__logo" :class="{ v2: v2 }">
+    <img :src="getLogo" alt="Logo"/>
     <h1>Ternhost</h1>
-  </router-link>
+  </a>
 </template>
 
 <script>
@@ -35,11 +35,13 @@ export default {
 
 .header__logo {
   @include center-y;
+
   &.v2 {
     h1 {
       color: $white-100;
     }
   }
+
   h1 {
     @include fluid-type($text-3xl, $text-3xl, 700, $blue-200);
     text-transform: uppercase;

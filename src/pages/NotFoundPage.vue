@@ -1,6 +1,4 @@
 <template>
-  <app-preloader></app-preloader>
-
   <main-header class="gray"></main-header>
 
   <not-found-hero></not-found-hero>
@@ -18,17 +16,14 @@ import AppFooter from '@/components/common/AppFooter/AppFooter.vue';
 import AppTerms from '@/components/common/AppTerms/AppTerms.vue';
 import AppPreloader from '@/components/common/AppPreloader/AppPreloader.vue';
 
-import { usePreloader } from '@/hooks/usePreloader.js';
+import {usePreloader} from '@/hooks/usePreloader.js';
 
 export default {
   name: 'NotFoundPage',
   components: {
     MainHeader,
-
     AppFooter,
     AppTerms,
-    AppPreloader,
-
     NotFoundHero,
   },
   mounted() {

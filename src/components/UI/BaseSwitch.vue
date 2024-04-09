@@ -13,8 +13,6 @@ export default {
   },
   methods: {
     toggle() {
-      console.log(this.id);
-
       !this.isEnabled ? this.on(this.id) : this.off(this.id);
     },
   },
@@ -33,6 +31,7 @@ export default {
   margin-left: 0.5rem;
   cursor: pointer;
   transition: all 0.25s;
+
   &::after {
     content: '';
     position: absolute;
@@ -44,8 +43,10 @@ export default {
     border-radius: 50%;
     transition: all 0.25s;
   }
+
   &.enabled {
     background-color: $blue-100;
+
     &::after {
       left: calc(100% - 0.188rem);
       transform: translateX(-100%);

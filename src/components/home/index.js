@@ -1,7 +1,7 @@
-import HomeHero from './HomeHero.vue';
-import HomeSentence from './HomeSentence.vue';
-import HomeReviews from './HomeReviews.vue';
-import HomeCounters from './HomeCounters.vue';
-import HomeOffers from './HomeOffers.vue';
+import HomeHero from './home/HomeHero.vue';
+import HomeSentence from './home/HomeSentence.vue';
+import HomeReviews from './home/HomeReviews.vue';
+import HomeCounters from './home/HomeCounters.vue';
+import HomeOffers from './home/HomeOffers.vue';
 
-export { HomeHero, HomeSentence, HomeReviews, HomeCounters, HomeOffers };
+export {HomeHero, HomeSentence, HomeReviews, HomeCounters, HomeOffers};

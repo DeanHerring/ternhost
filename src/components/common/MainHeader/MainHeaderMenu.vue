@@ -1,12 +1,12 @@
 <template>
   <ul class="header__menu-group">
     <li class="header__menu-group__item" v-for="page in pages" :key="page.id">
-      <router-link :to="page.url">{{ page.name }}</router-link>
+      <a :href="page.url">{{ page.name }}</a>
     </li>
     <li class="header__menu-group__item">
-      <router-link to="/users/login">
+      <a href="/users/login">
         <base-button class="btn-primary">Login</base-button>
-      </router-link>
+      </a>
     </li>
   </ul>
 </template>
@@ -22,10 +22,10 @@ export default {
   data() {
     return {
       pages: [
-        { id: 1, name: 'Domain', url: '/domain' },
-        { id: 2, name: 'Hosting', url: '/hosting' },
-        { id: 3, name: 'Website Builder', url: '/builder' },
-        { id: 4, name: 'Help', url: '/help' },
+        {id: 1, name: 'Domain', url: '/domain'},
+        {id: 2, name: 'Hosting', url: '/hosting'},
+        {id: 3, name: 'Website Builder', url: '/builder'},
+        {id: 4, name: 'Help', url: '/help'},
       ],
     };
   },
@@ -41,6 +41,7 @@ export default {
   @media screen and (max-width: 900px) {
     display: none;
   }
+
   &__item {
     a {
       @include fluid-type($text-base, $text-base, 500, $blue-200);
